@@ -1,0 +1,16 @@
+{
+  "NavLinks": [
+    {
+      "name": "Writes",
+      "href": "/"
+    },
+    {
+      "name": "Makes",
+      "href": "/"
+    },
+    {
+      "name": "Builds",
+      "href": "/"
+    }
+  ]
+}
