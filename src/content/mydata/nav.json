@@ -1,16 +1,16 @@
 [
   {
-    "name": "Writes",
+    "name": "Blog",
     "href": "/",
     "icon": "PenSquare"
   },
   {
-    "name": "Makes",
+    "name": "Finsta",
     "href": "/",
     "icon": "Image"
   },
   {
-    "name": "Builds",
+    "name": "Projects",
     "href": "/",
     "icon": "GitBranchPlus"
   },

@@ -1,11 +1,10 @@
----
-const {title} = Astro.props
----
+<script>
+  export let title
+</script>
 
 <head>
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
 </head>

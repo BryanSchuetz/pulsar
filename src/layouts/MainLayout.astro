@@ -1,6 +1,6 @@
 ---
 const { title } = Astro.props
-import Head from '../components/Head.astro'
+import Head from '../components/Head.svelte'
 import { getEntry } from 'astro:content';
 const navLinks = await getEntry('mydata', 'nav');
 import Header from '../components/Header.svelte'
