@@ -4,12 +4,11 @@ import { z, defineCollection } from 'astro:content';
 // 2. Define your collection(s)
 const mydata = defineCollection({ 
   type: 'data',
-  schema: z.object({
-    NavLinks: z.array(z.object({
+  schema: z.array(z.object({
       name: z.string(),
       href: z.string(),
+      icon: z.string(),
     })),
-  }),
 });
 
 // 3. Export a single `collections` object to register your collection(s)

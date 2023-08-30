@@ -1,16 +1,22 @@
-{
-  "NavLinks": [
-    {
-      "name": "Writes",
-      "href": "/"
-    },
-    {
-      "name": "Makes",
-      "href": "/"
-    },
-    {
-      "name": "Builds",
-      "href": "/"
-    }
-  ]
-}
+[
+  {
+    "name": "Writes",
+    "href": "/",
+    "icon": "PenSquare"
+  },
+  {
+    "name": "Makes",
+    "href": "/",
+    "icon": "Image"
+  },
+  {
+    "name": "Builds",
+    "href": "/",
+    "icon": "GitBranchPlus"
+  },
+
+  {
+    "name": "Uses",
+    "href": "/",
+    "icon": "PocketKnife"}
+]
