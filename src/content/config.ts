@@ -7,7 +7,6 @@ const mydata = defineCollection({
   schema: z.array(z.object({
       name: z.string(),
       href: z.string(),
-      icon: z.string(),
     })),
 });
 

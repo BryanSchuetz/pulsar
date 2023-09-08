@@ -1,0 +1,30 @@
+---
+const screens = ['sm', 'md', 'lg', 'xl'];
+---
+
+{screens.map((screen, index) => {
+  let displayClass = '';
+  let nextScreenHidden = '';
+
+  switch (screen) {
+    case 'sm':
+      displayClass = index > 0 ? 'hidden' : 'inline-flex';
+      nextScreenHidden = 'md:hidden';
+      break;
+    case 'md':
+      displayClass = 'hidden md:inline-flex lg:hidden';
+      break;
+    case 'lg':
+      displayClass = 'hidden lg:inline-flex xl:hidden';
+      break;
+    case 'xl':
+      displayClass = 'hidden xl:inline-flex';
+      break;
+  }
+
+  return (
+    <span class={`${displayClass} items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 ${nextScreenHidden}`}>
+      {screen}
+    </span>
+  );
+})}

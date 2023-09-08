@@ -1,0 +1,16 @@
+---
+const { text, href} = Astro.props
+import { PenSquare, GitBranchPlus, PocketKnife, Image } from 'lucide-astro'
+const IconComponents = {
+  Blog: PenSquare,
+  Projects: GitBranchPlus,
+  Uses: PocketKnife,
+  Photos: Image
+}
+console.log(IconComponents[text])
+---
+
+<a href={href} class="text-sm font-semibold leading-6 text-gray-900">  
+  {<IconComponents[text] class="inline -top-[1px] relative mr-1" />}
+  {text}
+</a>

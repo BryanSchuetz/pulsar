@@ -13,9 +13,6 @@ module.exports = {
         'SignalPink': '#EA6FAF',
         'SignalBlack': '#1A1921',
       },
-      screens: {
-        'smmd': '640px',
-      }
     },
 	},
 	plugins: [],

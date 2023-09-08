@@ -1,22 +1,18 @@
 [
   {
     "name": "Blog",
-    "href": "/",
-    "icon": "PenSquare"
+    "href": "/"
   },
   {
-    "name": "Finsta",
-    "href": "/",
-    "icon": "Image"
+    "name": "Photos",
+    "href": "/"
   },
   {
     "name": "Projects",
-    "href": "/",
-    "icon": "GitBranchPlus"
+    "href": "/"
   },
-
   {
     "name": "Uses",
-    "href": "/",
-    "icon": "PocketKnife"}
+    "href": "/"
+  }
 ]
