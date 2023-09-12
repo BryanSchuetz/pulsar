@@ -1,6 +1,6 @@
----
-const {title} = Astro.props
----
+<script>
+export let title
+</script>
 
 <head>
   <meta charset="utf-8" />

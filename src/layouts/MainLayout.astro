@@ -1,15 +1,20 @@
 ---
+// import props from pages
 const { title } = Astro.props
-import Head from '../components/Head.astro'
-import { getEntry } from 'astro:content';
-const navLinks = await getEntry('mydata', 'nav');
-import Header from '../components/Header.astro'
+// import components
+import Head from '../components/Head.svelte'
+import Header from '../components/Header.svelte'
 import Breakpoints from '../components/Breakpoints.astro'
+// import data from content collections
+import { getEntry } from 'astro:content';
+const navlinks = await getEntry('mydata', 'nav');
+// format data in something easier for Svelte to work with
+const links = navlinks.data
 ---
 <html lang="en">
   <Head title={title}/>
 	<body>
-    <Header links={navLinks}/>
+    <Header links={links} client:load/>
     <slot></slot>
     <Breakpoints />
 	</body>
@@ -19,4 +24,5 @@ import Breakpoints from '../components/Breakpoints.astro'
   body{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
+
 </style>

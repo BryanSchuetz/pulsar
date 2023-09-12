@@ -1,18 +1,22 @@
 [
   {
     "name": "Blog",
-    "href": "/"
+    "href": "/blog",
+    "icon": "PenSquared"
   },
   {
     "name": "Photos",
-    "href": "/"
+    "href": "/photos",
+    "icon": "Image"
   },
   {
     "name": "Projects",
-    "href": "/"
+    "href": "https://github.com/bryanschuetz",
+    "icon": "GitBranchPlus"
   },
   {
     "name": "Uses",
-    "href": "/"
+    "href": "/uses",
+    "icon": "PockenKnife"
   }
 ]
