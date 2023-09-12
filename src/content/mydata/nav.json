@@ -2,7 +2,7 @@
   {
     "name": "Blog",
     "href": "/blog",
-    "icon": "PenSquared"
+    "icon": "PenSquare"
   },
   {
     "name": "Photos",
@@ -17,6 +17,6 @@
   {
     "name": "Uses",
     "href": "/uses",
-    "icon": "PockenKnife"
+    "icon": "PocketKnife"
   }
 ]
