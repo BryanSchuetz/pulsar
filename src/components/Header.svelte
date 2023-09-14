@@ -19,7 +19,7 @@ export let links
       </a>
     </div>
     <div class="flex lg:hidden z-[11] self-start">
-      <Hamburger bind:open class={"p-0"}/>
+      <Hamburger bind:open --padding="0"/>
     </div>
       <div class="hidden lg:flex lg:gap-x-12">
         {#each links as link}

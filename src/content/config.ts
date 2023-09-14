@@ -10,9 +10,20 @@ const mydata = defineCollection({
       icon: z.string(),
     })),
 });
+const posts = defineCollection({ 
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    category: z.string(),
+    date: z.string(),
+    tags: z.array(z.string()),
+    layout: z.string(),      
+    }),
+});
 
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   'mydata': mydata,
+  'posts': posts,
 };
