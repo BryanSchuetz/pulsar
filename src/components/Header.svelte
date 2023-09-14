@@ -18,8 +18,8 @@ export let links
         <BadgeCheck fill="#1E86EB" color="white" />
       </a>
     </div>
-    <div class="flex lg:hidden z-[11]">
-      <Hamburger bind:open />
+    <div class="flex lg:hidden z-[11] self-start">
+      <Hamburger bind:open class={"p-0"}/>
     </div>
       <div class="hidden lg:flex lg:gap-x-12">
         {#each links as link}
@@ -43,9 +43,11 @@ export let links
           <BadgeCheck fill="#1E86EB" color="white" />
         </a>
       </div>
-      {#each links as link}
-        <MobileNavLink href={link.href} text={link.name} icon={link.icon}/>
-      {/each}
+      <div class="[@media(min-width:640px)]:mt-8">
+        {#each links as link}
+          <MobileNavLink href={link.href} text={link.name} icon={link.icon}/>
+        {/each}
+      </div>
       <div class="mt-6 flow-root">
         <div class="-my-6 divide-y divide-gray-500/10">
           <div class="space-y-2 py-6">

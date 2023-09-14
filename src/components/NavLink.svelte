@@ -12,4 +12,4 @@ const iconComponents = {
 const IconComponent = iconComponents[icon];
 </script>
 
-<a href={href} class="text-sm font-semibold leading-6 text-gray-900"><svelte:component this={IconComponent} />{text}</a>
+<a href={href} class="text-sm font-semibold leading-6 text-gray-900"><svelte:component this={IconComponent} class={"inline mr-1 relative -top-[2px]"} />{text}</a>
