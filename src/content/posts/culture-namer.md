@@ -1,12 +1,12 @@
 ---
 title: Culture Ship Randomizer
 category: web-development
-date: 2015-03-22 17:00:00 Z
+pubDate: 2015-03-22 17:00:00 Z
 tags:
 - The Culture
 - Jekyll
 - Web Development
-layout: post
+
 ---
 I have to name things all the time—servers, databases, directories, functions, classes, mixins, etc. It's kind of a pain. As <a href="https://www.quora.com/Why-is-naming-things-hard-in-computer-science-and-how-can-it-can-be-made-easier?share=1">everyone knows</a>:
 

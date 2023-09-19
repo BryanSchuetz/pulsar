@@ -1,11 +1,11 @@
 ---
 title: Operator Mono
 category: tooling
-date: 2016-03-05 03:00:00 -05:00
+pubDate: 2016-03-05 03:00:00 -05:00
 tags:
 - Typography
 - Tooling
-layout: post
+
 ---
 Recently, I've been trying out the ridiculously nice [Operator Mono](http://www.typography.com/blog/introducing-operator/) typeface in [iTerm](https://www.iterm2.com) and [Atom](https://atom.io).
 

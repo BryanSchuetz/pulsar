@@ -1,10 +1,10 @@
 ---
 title: Sunset In Shenandoah
-date: 2010-09-10 22:00:00 Z
+pubDate: 2010-09-10 22:00:00 Z
 tags:
 - Shenandoah
 - On The Trail
-layout: post
+
 category: photography
 ---
 <img src='/images/sunset.jpg' >

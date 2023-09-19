@@ -1,10 +1,10 @@
 ---
 title: AppleBlog Roundup 2
-date: 2009-08-10 22:00:00 Z
+pubDate: 2009-08-10 22:00:00 Z
 category: apple
 tags:
 - Apple
-layout: post
+
 ---
 Over the last couple of weeks I’ve written a few articles over at <a href="http://theappleblog.com/author/bryanschuetz/" style="color: rgb(1, 121, 165); ">TheAppleBlog</a> and wanted to include a roundup post to them all here for the sake of completeness:
 

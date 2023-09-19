@@ -1,11 +1,11 @@
 ---
 title: The Where Expression Filter in Jekyll 3.2
-date: 2016-09-31 03:00:00 -05:00
+pubDate: 2016-09-31 03:00:00 -05:00
 category: web-development
 tags:
 - Jekyll
 - Web Development
-layout: post
+
 ---
 If, like me, you’ve been distracted by all the changes to gem based themes in the last two releases of [Jekyll](https://jekyllrb.com) you may have missed the addition of this humble new filter: `where_exp`.
 

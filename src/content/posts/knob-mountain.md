@@ -1,11 +1,11 @@
 ---
 title: Knob Mountain
-date: 2010-05-05 22:00:00 Z
+pubDate: 2010-05-05 22:00:00 Z
 category: backpacking
 tags:
 - On The Trail
 - Shenandoah
-layout: post
+
 ---
 <img src='/images/knobnight.jpg' >
 

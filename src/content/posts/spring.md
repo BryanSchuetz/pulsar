@@ -1,9 +1,9 @@
 ---
 title: Spring
-date: 2010-03-01 22:00:00 Z
+pubDate: 2010-03-01 22:00:00 Z
 tags:
 - Photography
-layout: post
+
 category: photography
 ---
 <img src='/images/spring.jpg' >

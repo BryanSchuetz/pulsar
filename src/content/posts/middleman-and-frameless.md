@@ -1,11 +1,11 @@
 ---
 title: In the Middle with Middleman and Frameless
-date: 2013-04-19 22:00:00 Z
+pubDate: 2013-04-19 22:00:00 Z
 category: web-development
 tags:
 - Web Development
 - Static
-layout: post
+
 ---
 I love <a href="http://middlemanapp.com/" title="http://middlemanapp.com/">Middleman</a>. It's simple, powerful, and fast. I've been playing with Rails and Rails prototyping for a while, mostly with <a href="http://get-serve.com/" title="http://get-serve.com/">Serve</a>—and with static site generators like <a href="http://octopress.org/" title="http://octopress.org/">Jekyll</a> and <a href="http://octopress.org/" title="http://octopress.org/">Octopress</a> for about just as long. I think Middleman is the best of all of them.
 

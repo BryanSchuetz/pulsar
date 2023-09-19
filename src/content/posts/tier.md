@@ -1,10 +1,10 @@
 ---
 title: Tier
-date: 2015-02-19 17:00:00 Z
+pubDate: 2015-02-19 17:00:00 Z
 tags:
 - The Culture
 - Books
-layout: post
+
 category: books
 ---
 I'm currently reading the <a href="http://en.wikipedia.org/wiki/Excession">fifth</a> book in Iain Banks' <a href="http://en.wikipedia.org/wiki/Culture_series">Culture Series</a> and I think it may be the best one yet. At least, it finally provides that in-depth view of the Culture one looks for after four books of skirting around on the periphery. Banks fills all the books with such an amazing amount of creative detail that the history, geography, and ecology of even minor civilzations jump from the page. A case in point, is this brief description of Tier:

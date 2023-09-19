@@ -1,10 +1,10 @@
 ---
 title: Vue Filters
-date: 2017-03-16 03:00:00 -05:00
+pubDate: 2017-03-16 03:00:00 -05:00
 tags:
 - Web Development
 - Vue
-layout: post
+
 category: web-development
 ---
 In [Vue](https://vuejs.org), we can call filters on text just like we would when templating in Liquid with Jekyll. For instance, if we wanted to transform some Markdown into HTML we could do something like this:

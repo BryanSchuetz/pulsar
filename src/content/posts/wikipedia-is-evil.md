@@ -1,9 +1,9 @@
 ---
 title: Wikipedia is Evil
-date: 2009-07-05 22:00:00 Z
+pubDate: 2009-07-05 22:00:00 Z
 tags:
 - Interwebz
-layout: post
+
 category: interwebz
 ---
 <a href="http://www.wikipedia.org/">Wikipedia</a> is evil, yeah that’s right evil. The other day I was tooling around in the o’le RSS river of news when I stumbled upon a random tweet from apparent <a href="http://en.wikipedia.org/wiki/Daniel_J._Bernstein" style="color: rgb(1, 121, 165); ">computing legend</a>  Daniel Bernstein. Who, though I confess I’d never heard of him before (please don’t make me turn in my geek card), was apparently instrumental in getting software code recognized by the judicial branch as protected speech under the First Amendment. His message read simply:<br>

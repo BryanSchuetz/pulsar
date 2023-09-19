@@ -1,11 +1,11 @@
 ---
 title: Jekyll and Continuous Integration with Travis CI
-date: 2016-02-20 03:00:00 -05:00
+pubDate: 2016-02-20 03:00:00 -05:00
 tags:
 - Jekyll
 - Web Development
 category: web-development
-layout: post
+
 ---
 
 

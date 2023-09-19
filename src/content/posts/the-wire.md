@@ -1,9 +1,9 @@
 ---
 title: Baltimore
-date: 2014-12-01 17:00:00 Z
+pubDate: 2014-12-01 17:00:00 Z
 tags:
 - Baltimore
-layout: post
+
 category: interwebz
 ---
 I lived in Baltimore for nearly 10 years, it's maybe my favorite city in America. <a href="http://en.wikipedia.org/wiki/The_Wire">The Wire</a> was in production for most of the time I was living there, and it was a common sight to see actors milling about a cluster of Haddad's trucks anywhere in the city. It is, without a doubt, one of the best TV shows ever.

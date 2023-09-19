@@ -1,10 +1,10 @@
 ---
 title: Seeing Deeper
-date: 2016-02-09 03:00:00 -05:00
+pubDate: 2016-02-09 03:00:00 -05:00
 tags:
 - Photography
 - National Cathedral
-layout: post
+
 category: photography
 ---
 

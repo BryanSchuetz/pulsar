@@ -1,10 +1,10 @@
 ---
 title: Wolf Hall
-date: 2016-01-27 06:00:00 Z
+pubDate: 2016-01-27 06:00:00 Z
 tags:
 - Books
 - History
-layout: post
+
 category: books
 ---
 <blockquote>

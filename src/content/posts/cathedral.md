@@ -1,10 +1,10 @@
 ---
 title: National Cathedral
-date: 2015-01-25 17:00:00 Z
+pubDate: 2015-01-25 17:00:00 Z
 category: photography
 tags:
 - National Cathedral
-layout: post
+
 ---
 <img src='/images/window_large.jpg' >
 

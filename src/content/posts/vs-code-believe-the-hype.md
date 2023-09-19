@@ -1,10 +1,10 @@
 ---
 title: 'VS Code: Hope, Hype, and Hijacking'
-date: 2018-02-21 22:00:00 Z
+pubDate: 2018-02-21 22:00:00 Z
 tags:
 - Tooling
 - Text Editors
-layout: post
+
 category: tooling
 ---
 

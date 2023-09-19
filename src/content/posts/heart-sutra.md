@@ -1,10 +1,10 @@
 ---
 title: Heart Sutra
 category: philosophy
-date: 2010-07-01 22:00:00 Z
+pubDate: 2010-07-01 22:00:00 Z
 tags:
 - Buddhisim
-layout: post
+
 ---
 I’ve been thinking on the Buddhist Heart Sutra quite a bit lately. If you’re not familiar with the specific aspects of Buddhist philosophy represented in this particular sutra I’ll give you the cliff notes.
 

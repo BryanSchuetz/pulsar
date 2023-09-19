@@ -1,11 +1,11 @@
 ---
 title: Git Branch in the Bash Prompt
 category: tooling
-date: 2018-02-25 03:00:00 -05:00
+pubDate: 2018-02-25 03:00:00 -05:00
 tags:
 - Command Line
 - Tooling
-layout: post
+
 ---
 
 Waaaay late on this one—but you know what they say. For a while I've had a text trigger in [iTerm2](http://iterm2.com) to catch and highlight the currently active Git branch—but it never occurred to me to just add it directly into the command prompt.

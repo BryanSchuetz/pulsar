@@ -1,10 +1,10 @@
 ---
 title: Clouds
-date: 2010-06-10 22:00:00 Z
+pubDate: 2010-06-10 22:00:00 Z
 category: photography
 tags:
 - Photography
-layout: post
+
 ---
 <img src='/images/clouds.jpg' >
 

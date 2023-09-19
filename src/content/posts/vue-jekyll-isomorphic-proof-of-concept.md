@@ -1,11 +1,11 @@
 ---
 title: 'A Vue & Jekyll Proof of Concept'
-date: 2017-07-11 03:00:00 -05:00
+pubDate: 2017-07-11 03:00:00 -05:00
 tags:
 - Web Development
 - Vue
 - Jekyll
-layout: post
+
 category: web-development
 ---
 

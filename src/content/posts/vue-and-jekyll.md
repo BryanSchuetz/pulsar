@@ -1,11 +1,11 @@
 ---
 title: Vue and Jekyll
-date: 2017-03-15 03:00:00 -05:00
+pubDate: 2017-03-15 03:00:00 -05:00
 tags:
 - Jekyll
 - Web Development
 - Vue
-layout: post
+
 category: web-development
 ---
 I've been using [Vue](https://vuejs.org) a bit lately, and I love it. If you're not familiar with it, you should really check it out. In a nut: **it's a client-side JS framework, much like Ember, Angular, React, etc.** It borrows conventions from all those other frameworks and ends up with—what I think anyways—is the simplest, most elegant, client-side framework around. Have a look at [the docs](http://vuejs.org/v2/guide/) and see for yourself.

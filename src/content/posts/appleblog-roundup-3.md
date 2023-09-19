@@ -1,10 +1,10 @@
 ---
 title: AppleBlog Roundup 3
-date: 2010-05-10 22:00:00 Z
+pubDate: 2010-05-10 22:00:00 Z
 category: apple
 tags:
 - Apple
-layout: post
+
 ---
 Over the last couple of weeks (OK.. so more like months, I’m a bit of a slacker) I’ve written a few posts over at <a href="http://theappleblog.com">TheAppleBlog</a> and I just wanted to include them here for the sake of completeness. A few of these are on Google Quick Search Box which, while being a great little app, has frustrated me a bit with it’s lack of forward progress in Beta. I’ve recently switched over to <a href="http://www.obdev.at/products/launchbar/index.html">Launchbar5</a> for all my GUI Ninja Tricks and I have to say I think it’s far better at the moment than QSB. If you’re into doing a lot of stuff very quickly from the keyboard, you might want to check it out.
 

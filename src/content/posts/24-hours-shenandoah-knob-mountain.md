@@ -1,11 +1,11 @@
 ---
 title: '24 Hours in Shenandoah: Knob Mountain'
-date: 2010-08-01 22:00:00 Z
+pubDate: 2010-08-01 22:00:00 Z
 category: backpacking
 tags:
 - Shenandoah
 - On-the-trail
-layout: post
+
 ---
 I managed to get out for a quick loop hike in Shenandoah last weekend, 24 hours quick to be exact. To me, 24 hours seems to be almost the perfect length of time to be able to enjoy an easy bit of backpacking. I can head out early on a Saturday hike all day, find a nice place to spend the night, hike out in the morning, and still have time Sunday to run errands and get ready for the upcoming week. This weekend I was out on Knob mountain.
 

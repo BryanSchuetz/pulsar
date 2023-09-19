@@ -1,11 +1,11 @@
 ---
 title: Cold Stone
-date: 2010-02-15 22:00:00 Z
+pubDate: 2010-02-15 22:00:00 Z
 category: photography
 tags:
 - Photography
 - Snowmageddon
-layout: post
+
 ---
 <img src='/images/coldstones.jpg' >
 

@@ -1,18 +1,18 @@
 ---
 title: Busting CSS Cache with Jekyll
-date: 2018-02-16 22:00:00 Z
+pubDate: 2018-02-16 22:00:00 Z
 category: web-development
 tags:
 - Jekyll
 - Ruby
-layout: post
+
 ---
 If you're setting long expires headers on your static assets—**as God demands**—then at some point, you will want to bust that browser cache. If you're also using Jekyll, there's a [plugin](https://github.com/envygeeks/jekyll-assets) for that. **Here's the thing though**: not everyone needs a full-fledged, [sprockets](https://github.com/rails/sprockets) based, asset pipeline for their project. In the world of Jekyll—I'd actually say that the _majority_ of folks don't need that particular sledgehammer. It adds quite a lot of complexity to your build and, to be fair, the documentation is a bit inscrutable.
 
 There's nothing wrong with simple workarounds like this:
 
 ```html
-{%raw%}<link rel="stylesheet" href="/css/main.css?{{site.time | date: '%s'}}">{%endraw%}
+{%raw%}<link rel="stylesheet" href="/css/main.css?{{site.time | pubDate: '%s'}}">{%endraw%}
 ```
 
 Which uses the `site.time` variable formatted as seconds since the epoch (1970). When outputed, the `?1518881511` query paramater gets appended to the end of the filename—browsers see this as a new asset and download it. This is great, and will bust browser cache of the file everytime the site is built. 

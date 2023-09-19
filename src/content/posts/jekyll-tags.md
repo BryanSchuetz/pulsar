@@ -1,11 +1,11 @@
 ---
 title: Jekyll Tag Archive Pages
-date: 2016-02-03 03:00:00 -05:00
+pubDate: 2016-02-03 03:00:00 -05:00
 category: web-development
 tags:
 - Web Development
 - Jekyll
-layout: post
+
 ---
 
 <p>If you’ve ever built a site with <a href="http://jekyllrb.com">Jekyll</a>, chances are pretty good that at some point you’ve asked yourself—how do I setup tag archive pages? The truth is that it’s kind of a pain. </p>

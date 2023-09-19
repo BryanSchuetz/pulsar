@@ -1,9 +1,9 @@
 ---
 title: Sentiment Analysis Filters for Twitter
-date: 2018-03-26 22:00:00 Z
+pubDate: 2018-03-26 22:00:00 Z
 tags:
 - Twouts
-layout: post
+
 published: false
 category: interwebz
 ---

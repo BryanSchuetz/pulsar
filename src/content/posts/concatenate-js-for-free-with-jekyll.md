@@ -1,11 +1,11 @@
 ---
 title: Concatenate JS for Free with Jekyll
 category: web-development
-date: 2018-04-15 22:00:00 Z
+pubDate: 2018-04-15 22:00:00 Z
 tags:
 - Jekyll
 - Web Development
-layout: post
+
 socialImage: '/images/concatenate.png'
 ---
 

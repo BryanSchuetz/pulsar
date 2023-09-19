@@ -1,10 +1,10 @@
 ---
 title: Verizon DBIR Puzzle 2016
 category: puzzles
-date: 2016-05-09 03:00:00 -05:00
+pubDate: 2016-05-09 03:00:00 -05:00
 tags:
 - Puzzles
-layout: post
+
 ---
 I've been watching [my brother](http://darthnull.org) solve various crypto puzzles here and there on the internet for years. So, I figured I'd give one a shot—I mean, if he could do it, how difficult could it really be? **Spoiler:** _It was a giant pain in the ass_.
 

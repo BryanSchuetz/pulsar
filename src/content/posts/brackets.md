@@ -1,10 +1,10 @@
 ---
 title: 'Brackets'
-date: 2019-10-05 22:00:00 Z
+pubDate: 2019-10-10 22:00:00 Z
 category: interwebz
 tags:
 - XKCD
-layout: post
+
 socialImage: '/images/brackets.jpg'
 ---
 

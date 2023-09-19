@@ -1,9 +1,9 @@
 ---
 title: Verified Reporters
-date: 2009-06-20 22:00:00 Z
+pubDate: 2009-06-20 22:00:00 Z
 tags:
 - Interwebz
-layout: post
+
 category: interwebz
 ---
 

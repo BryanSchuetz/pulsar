@@ -1,11 +1,11 @@
 ---
 title: AppleBlog Roundup 4
-date: 2010-08-05 22:00:00 Z
+pubDate: 2010-08-05 22:00:00 Z
 category: apple
 tags:
 - Apple
 - Photography
-layout: post
+
 ---
 
 Well, another couple weeks have gone by and it’s time for another roundup of recent articles I’ve written over at <a href="http://theappleblog.com">TheAppleBlog</a>. Maybe one of these days I’ll figure out a better way to bring all my content together but until then here’s roundup number four.

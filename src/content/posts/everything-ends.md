@@ -1,11 +1,11 @@
 ---
 title: Everything Ends
 category: philosophy
-date: 2010-06-20 22:00:00 Z
+pubDate: 2010-06-20 22:00:00 Z
 tags:
 - Buddhisim
 - Photography
-layout: post
+
 ---
 <img src='/images/everythingends.jpg' >
 

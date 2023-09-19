@@ -1,11 +1,11 @@
 ---
 title: Environment Variables, Bundler Groups, and Jekyll
 category: web-development
-date: 2016-03-04 03:00:00 -05:00
+pubDate: 2016-03-04 03:00:00 -05:00
 tags:
 - Jekyll
 - Web Development
-layout: post
+
 ---
 Oh my. If you're working with Jekyll and rolling your own build and deployment process, chances are you're slowly but surely accumulating sundry plugins, gems, and build scripts. Some of these are for local development, some are for deploying your site, some are for both—but configured differently for each. How do you manage all this? Bundler groups and environment variables are here to help.
 

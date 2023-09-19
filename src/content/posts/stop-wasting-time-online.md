@@ -1,10 +1,10 @@
 ---
 title: Stop Wasting Time Online
-date: 2016-01-26 17:00:00 Z
+pubDate: 2016-01-26 17:00:00 Z
 tags:
 - GTD
 - Web Development
-layout: post
+
 category: tooling
 ---
 <p>I’ve been wasting way too much time online lately. So I built a <a href="http://bryanschuetz.github.io/motivation/">reminder</a>, and am now redirecting distracting services like Twitter, and Instagram directly to it. Now, if I try to access Twitter, I get a strong prompt to <a href="http://bryanschuetz.github.io/motivation/">STOP WASTING TIME ONLINE</a>.</p>

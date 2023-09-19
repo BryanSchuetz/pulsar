@@ -1,11 +1,11 @@
 ---
 title: All Love And No Hate Tho
-date: 2016-09-13 03:00:00 -05:00
+pubDate: 2016-09-13 03:00:00 -05:00
 category: tooling
 tags:
 - Applescript
 - Music
-layout: post
+
 ---
 The old rating system in iTunes is so 2001—full of stars. I used to try and rank all my tracks, but that way lies madness. Recently though, iTunes gave us the option of using the 💙 to signify approval of a track and a 💔 to signify hated tracks, and country music. This is good.
 

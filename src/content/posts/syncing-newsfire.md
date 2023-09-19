@@ -1,10 +1,10 @@
 ---
 title: Syncing NewsFire
-date: 2009-02-15 22:00:00 Z
+pubDate: 2009-02-15 22:00:00 Z
 tags:
 - OS X
 - Hacks
-layout: post
+
 category: tooling
 ---
 
@@ -24,6 +24,6 @@ into the DropBox and replace them with symbolic links.  To create a symbolic lin
 <code> ln -s /Users/yournamehere/Dropbox/newsfiresymlinks/org.xlife.NewsFire.plist /Users/yournamehere/Library/Preferences</code>
 It really is that simple and from what I can see, works like a charm.
 
-<strong>Update:</strong>Depending on the privileges you have when creating the symlink you may need to lock the file after you create it so NewsFire does not over write it when you exit.
+<strong>UppubDate:</strong>Depending on the privileges you have when creating the symlink you may need to lock the file after you create it so NewsFire does not over write it when you exit.
 
 

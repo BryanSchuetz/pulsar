@@ -1,11 +1,11 @@
 ---
 title: Vue Routing with Jekyll
-date: 2017-04-05 03:00:00 -05:00
+pubDate: 2017-04-05 03:00:00 -05:00
 tags:
 - Web Development
 - Vue
 - Jekyll
-layout: post
+
 category: web-development
 ---
 I've been continuing to play around with an [isomorphic-ish](/vue-and-jekyll) approach to building sites with [Jekyll](jekyllrb.com) and [Vue](vuejs.org)—this week is routing. After we've pulled down the first page from the server, and begun relying on Vue, we still want to be able to move through the site while updating the URL, preserving the window's history, and keeping things (components, sections, pages, etc.) organized in a way that makes sense—without resetting the whole DOM, obviously. 

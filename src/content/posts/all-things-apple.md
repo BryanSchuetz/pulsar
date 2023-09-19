@@ -1,10 +1,10 @@
 ---
 title: All Things Apple
-date: 2009-05-20 22:00:00 Z
+pubDate: 2009-05-20 22:00:00 Z
 category: apple
 tags:
 - Apple
-layout: post
+
 ---
 So I’ve decided to go ahead and throw in my lot with the good folks over at TheAppleBlog when it comes to my rants and reviews about all things Apple, OS X and the like. You’ll be able to see the articles I contribute over there by going to my <a href="http://theappleblog.com/author/bryanschuetz/">Author Archive Page</a> or better yet by grabbing the <a href="http://feeds.feedburner.com/theappleblog"> RSS Feed</a> for the whole site. My first post on Proximity Automation (using Bluetooth and AppleScript to automatically fire off actions based on your proximity to the computer) is already available.
 

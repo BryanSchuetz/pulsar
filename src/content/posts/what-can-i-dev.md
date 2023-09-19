@@ -1,10 +1,10 @@
 ---
 title: What Can I Dev For My Country
-date: 2009-02-25 22:00:00 Z
+pubDate: 2009-02-25 22:00:00 Z
 tags:
 - Sunlight Foundation
 - Gov20
-layout: post
+
 category: interwebz
 ---
 A little while ago I ran across <a href="http://web.archive.org/web/20090226004533/http://technosailor.com/2009/02/21/ask-not-what-your-country-can-dev-for-you/">this post</a> from <a href="http://twitter.com/corbett3000">@corbett3000</a> about the need for greater civic involvement from the tech community. This was a call to "build stuff that matters” to help the country do more with less, keep our leaders honest, their governance transparent, and plainly put—to fix crap that’s broken.
@@ -15,6 +15,6 @@ So, surprisingly freed from the overbearing cynicism so typical of my generation
 
 I also registered for the upcoming <a href="http://barcamp.org/eDemocracyCamp2">eDemocracy Camp</a> going on here in DC this April. This whole optimism and participation thing feels a bit weird after 8 years of cynical obstinate opposition, but I think I could get used to it. If you’re a techie in the DC area and are going to be at the eDemocracy camp I’ll see you there, if not, maybe you should be asking yourself: What can I develop for my country?
 
-<strong>Update:</strong> I eventually got around to <a href="https://github.com/BryanSchuetz/mobilizer-testing">building something</a> with this API, a mobile optimized web app built with Ruby and Rack for soliciting public outreach to Capitol Hill.
+<strong>UppubDate:</strong> I eventually got around to <a href="https://github.com/BryanSchuetz/mobilizer-testing">building something</a> with this API, a mobile optimized web app built with Ruby and Rack for soliciting public outreach to Capitol Hill.
 
 

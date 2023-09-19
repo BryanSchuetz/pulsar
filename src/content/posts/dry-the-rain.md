@@ -1,10 +1,10 @@
 ---
 title: Dry The Rain
 category: music
-date: 2018-12-16 22:00:00 Z
+pubDate: 2018-12-16 22:00:00 Z
 tags:
 - Music
-layout: post
+
 socialImage: '/images/dry-the-rain.png'
 ---
 

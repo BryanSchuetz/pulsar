@@ -1,11 +1,11 @@
 ---
 title: Viewing AWS logs on the Command Line
-date: 2018-03-28 22:00:00 Z
+pubDate: 2018-03-28 22:00:00 Z
 category: tooling
 tags:
 - Serverless
 - Web Development
-layout: post
+
 ---
 
 If you've ever tried to quickly check AWS logs from the command line then you know my pain. Don't get me wrong, the [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws) is great and all but—if I just want to quickly double check that a Lambda function has returned what I think it has—it's kind of a giant pain in the ass. You've got to first `describe-log-streams` for a given log group, grep to find the most recent stream and capture the `logStreamName`, then `get-log-events` for the stream (requires `logStreamName`), and then finally grep for what it is you were hoping to find.

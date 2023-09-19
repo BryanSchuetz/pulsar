@@ -1,11 +1,11 @@
 ---
 title: Open Table Alerts
 category: web-development
-date: 2015-02-03 17:00:00 Z
+pubDate: 2015-02-03 17:00:00 Z
 tags:
 - Web Development
 - D.C.
-layout: post
+
 ---
 Sometimes I forget to do stuff. Like making reservations for Valentines Day Dinner weeks and weeks in advance because the girl wants to go to some super popular restaurant. What to do? Well, if the restaurant refuses to keep a stand-by list and is wired up to something like <a href="http://opentable.com">Open Table</a> it's not as bad as you might think.
 
@@ -20,4 +20,4 @@ Then I created a <a href="http://en.wikipedia.org/wiki/Launchd">launchd daemon</
 
 Once I can get a Hot Tables login I'll probably set Resicat free but untill then he'll stay on the job, and I'm certain he won't let me down.
 
-<strong>Update:</strong> Well, <a href="http://twitter.com/BryanSchuetz/status/566346541557121025/photo/1">Resicat came through at the last moment</a>. I'd almost given up, but with just a day left he finally found a table—there were a couple, I guess the restaruant puts them all into the system at once. I clicked the notificaiton and grabbed the one for 6:45, perfect. Thanks Resicat, see you next year.
+<strong>UppubDate:</strong> Well, <a href="http://twitter.com/BryanSchuetz/status/566346541557121025/photo/1">Resicat came through at the last moment</a>. I'd almost given up, but with just a day left he finally found a table—there were a couple, I guess the restaruant puts them all into the system at once. I clicked the notificaiton and grabbed the one for 6:45, perfect. Thanks Resicat, see you next year.

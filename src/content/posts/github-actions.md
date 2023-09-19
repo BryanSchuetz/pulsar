@@ -1,15 +1,15 @@
 ---
 title: Using GitHub Actions to Deploy your Jekyll Site
 category: web-development
-date: 2018-12-01 22:00:00 Z
+pubDate: 2018-12-01 22:00:00 Z
 tags:
 - Jekyll
 - Web Development
 - GitHub Actions
-layout: post
+
 ---
 
-**UPDATE: Github Actions API has been updated, [See here for an updated version of what's discussed below](/github-actions-redux)**
+**UPpubDate: Github Actions API has been updated, [See here for an updated version of what's discussed below](/github-actions-redux)**
 
 A few weeks ago, I got invited into the limited beta for [GitHub Actions](https://github.com/features/actions). In case you've not heard of *Actions* before—it's GitHub's pitch for the future of continuous integration/deployment of GitHub repos. As has been said:
 

@@ -1,10 +1,10 @@
 ---
 title: Feed a Fever
 category: tooling
-date: 2009-06-01 22:00:00 Z
+pubDate: 2009-06-01 22:00:00 Z
 tags:
 - Interwebz
-layout: post
+
 ---
 
 
@@ -22,6 +22,6 @@ The idea is that I never have to worry about unread counts in Sparks. I don’t 
 
 I should note that Fever is not a desktop application, it’s a PHP – SQL – HTML – CSS solution that you need to host on your own server. I’ve been playing with it for a couple weeks now and so far so good. I’m still trying to get a handle on fine tuning Sparks vs. Kindling and I still have a backlog of sites that need to be added in. I’m hopeful though that this may be the final answer to my RSS dilemma. 
 
-<strong>Update:</strong> Well after a couple weeks of using Fever I’m afraid to say it just doesn’t make the cut. It’s a neat idea and the multi-week analysis of trends works well enough but it’s just not a good fit for how I’m reading my news.  Trend analysis for periods shorter than a week seem to get overwhelmed by a few popular sites (BoingBoing, Engadget, etc.). Also the fact that it’s web based is a bit of a drawback when it comes to the UI. A really well designed/developed website (which Fever certainly is) is still in the end just a website even if you are running it in a site specific browser. So.. back to NewsFire for me. I will miss the iPhone app and the ease of use across multiple machines though. Oh well, the search continues. 
+<strong>UppubDate:</strong> Well after a couple weeks of using Fever I’m afraid to say it just doesn’t make the cut. It’s a neat idea and the multi-week analysis of trends works well enough but it’s just not a good fit for how I’m reading my news.  Trend analysis for periods shorter than a week seem to get overwhelmed by a few popular sites (BoingBoing, Engadget, etc.). Also the fact that it’s web based is a bit of a drawback when it comes to the UI. A really well designed/developed website (which Fever certainly is) is still in the end just a website even if you are running it in a site specific browser. So.. back to NewsFire for me. I will miss the iPhone app and the ease of use across multiple machines though. Oh well, the search continues. 
 
 

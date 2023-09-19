@@ -1,11 +1,11 @@
 ---
 title: Pimp Your Quicklook
 category: tooling
-date: 2009-02-10 22:00:00 Z
+pubDate: 2009-02-10 22:00:00 Z
 tags:
 - OS X
 - Hacks
-layout: post
+
 ---
 I’m lucky enough to be able to work on an OS X system at my day job but officially it’s a “Microsoft shop” with most people on Windows and our intranet powered by <a href="http://www.microsoft.com/Sharepoint/default.mspx">SharePoint</a>. We store a lot of documents on SharePoint and it’s always a pain in the ass to have to fire up mac office to have a quick look at a .doc or .xls file. To make matters worse there are a lot of Office 2007 files that my version of mac office won’t open.
 

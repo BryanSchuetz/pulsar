@@ -1,10 +1,9 @@
 ---
 title: AppleBlog Roundup 1
-date: 2009-06-05 22:00:00 Z
+pubDate: 2009-06-05 22:00:00 Z
 category: apple
 tags:
 - Apple
-layout: post
 ---
 
 

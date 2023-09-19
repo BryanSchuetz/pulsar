@@ -1,11 +1,11 @@
 ---
 title: Clean URLs in Jekyll
-date: 2016-02-10 03:00:00 -05:00
+pubDate: 2016-02-10 03:00:00 -05:00
 category: web-development
 tags:
 - Jekyll
 - Web Development
-layout: post
+
 ---
 
 GitHub Pages recently [updated](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0) its service to start using the latest major version of Jekyll—that’s [3.0](http://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/) for those keeping score at home. Aside from [incremental regeneration](http://jekyllrb.com/docs/configuration/)—which I love when I’m working with rather large sites—the thing I’m most excited about in 3.0 is [extension-less URLs](http://jekyllrb.com/docs/permalinks/#extensionless-permalinks).

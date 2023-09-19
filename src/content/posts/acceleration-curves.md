@@ -1,11 +1,11 @@
 ---
 title: Acceleration Curves
-date: 2009-02-11 22:00:00 Z
+pubDate: 2009-02-11 22:00:00 Z
 category: tooling
 tags:
 - OS X
 - Hacks
-layout: post
+
 ---
 I love OS X. It’s far and away the best operating system I’ve ever used.  There are a couple things about it though that have always been a frustration for me. Chief among them is the way movement of the mouse on your desk is translated to movement of the cursor on your screen a process handled by something called the “Acceleration Curve”.
 

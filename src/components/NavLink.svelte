@@ -2,12 +2,12 @@
 export let text
 export let href
 export let icon
-import { PenSquare, GitBranchPlus, PocketKnife, Image } from 'lucide-svelte'
+import { PenSquare, GitBranchPlus, PocketKnife, Music4 } from 'lucide-svelte'
 const iconComponents = {
   PenSquare,
   GitBranchPlus,
   PocketKnife,
-  Image
+  Music4
 };
 const IconComponent = iconComponents[icon];
 </script>

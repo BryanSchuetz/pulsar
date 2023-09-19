@@ -1,12 +1,11 @@
 ---
 title: 'Github Actions V2: Build and Deploy Jekyll'
 category: web-development
-date: 2019-10-05 22:00:00 Z
+pubDate: 2019-10-05 22:00:00 Z
 tags:
 - Jekyll
 - Web Development
 - GitHub Actions
-layout: post
 socialImage: '/images/actions2.png'
 ---
 

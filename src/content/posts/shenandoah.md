@@ -1,10 +1,10 @@
 ---
 title: Shenandoah
-date: 2009-09-15 22:00:00 Z
+pubDate: 2009-09-15 22:00:00 Z
 tags:
 - On The Trail
 - Shenandoah
-layout: post
+
 category: backpacking
 ---
 I spent last weekend hiking around in <a href="http://www.nps.gov/shen/index.htm"> Shenandoah National Park </a> and despite having not been hiking for  a long time had an absolute blast. The park runs roughly north south for over 100 miles along the spine of the Blue Ridge Mountains and encompasses nearly 200,000 acres 80,000 of which are protected as wilderness areas under the <a href="http://en.wikipedia.org/wiki/National_Wilderness_Preservation_System">National Wilderness Preservation System</a>. Skyline drive runs the length of the park and cuts essentially right down the middle offering an abundance of scenic overlooks filled with hollows and ridges covered in timber. There’s lots of wildlife to be seen and while hiking a 12 mile loop in the largest of the parks wilderness areas I spotted a skunk, 2 grouse, a turkey and a black bear along the trail.

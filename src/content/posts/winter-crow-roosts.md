@@ -1,9 +1,9 @@
 ---
 title: Winter Crow Roosts
-date: 2013-03-09 22:00:00 Z
+pubDate: 2013-03-09 22:00:00 Z
 tags:
 - Crows
-layout: post
+
 category: photography
 ---
 It’s March, and the arrival of Springtime means the end of the large crow roosts. I’d never known about crow roosts before I moved into my current apartment, but apparently during the Winter crows gather in large numbers in the evening hours and then fly off to spend the whole night gathered together in one spot as a <a href="http://en.wikipedia.org/wiki/Communal_roosting">roost</a>. Roosts can range in size from a hundered crows to hundereds of thousands of crows.

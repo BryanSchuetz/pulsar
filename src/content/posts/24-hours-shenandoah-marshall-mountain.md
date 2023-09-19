@@ -1,11 +1,11 @@
 ---
 title: '24 Hours in Shenandoah: Marshall Mountain'
-date: 2012-07-03 22:00:00 Z
+pubDate: 2012-07-03 22:00:00 Z
 category: backpacking
 tags:
 - Shenandoah
 - On The Trail
-layout: post
+
 ---
 Another weekend and another chance to spend 24 hours in Shenandoah. This time I was up on Marshall Mountain in the Northern section of the park. The loop starts at the Jenkins Gap overlook around the 12 mile mark on Skyline Drive. I’ve gone both ways around on this loop and I definitely think coming back on the Appalachian Trail is the way to go. That section of the loop has the best views and there are some real choice spots for pitching a shelter up on the ridge.
 
