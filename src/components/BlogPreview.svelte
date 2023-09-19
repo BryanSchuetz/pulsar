@@ -1,12 +1,6 @@
 <script>
-import {readableDate} from '../js/utils.js'
-import marked from 'marked'
-const excerptLength = 250
-// Function to truncate markdown and convert to HTML
-function createExcerpt(postBody) {
-    const truncatedMarkdown = postBody.substring(0, excerptLength) + '...';
-    return marked.parse(truncatedMarkdown);
-  }
+import {readableDate, createExcerpt} from '../js/utils.js'
+
 export let posts = posts
 </script>
 
@@ -15,7 +9,7 @@ export let posts = posts
     <p class="text-2xl md:text-3xl font-semibold leading-7 text-SignalPurp text-right">Jibber Jabber</p>
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {#each posts as post}
-      <article class="flex max-w-xl flex-col items-start justify-between">
+      <article class="flex max-w-xl flex-col items-start justify-start">
         <div class="flex items-center gap-x-4 text-xs">
           <time datetime="2020-03-16" class="text-gray-500">{readableDate(post.data.pubDate)}</time>
           <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{post.data.category}</a>

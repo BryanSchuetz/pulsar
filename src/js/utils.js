@@ -1,5 +1,4 @@
-import { DateTime } from "luxon";
-
+// Format posts for display: Filter out future posts, sort by date or randomize
 export function formatPosts(posts, {
   filterOutFuturePosts = true,
   sortByDate = true,
@@ -26,10 +25,19 @@ export function formatPosts(posts, {
   return filteredPosts;
 }
 
-
-
+// Format date in a readable way
+import { DateTime } from "luxon";
 export  function readableDate(date) {
     return DateTime.fromJSDate(date, {
       zone: "utc",
     }).toFormat("LLLL d, y");
+  }
+
+// Generate limited html excerpt from a markdown file
+import marked from 'marked'
+const excerptLength = 250
+// Function to truncate markdown and convert to HTML
+export function createExcerpt(postBody) {
+    const truncatedMarkdown = postBody.substring(0, excerptLength);
+    return marked.parse(truncatedMarkdown);
   }
