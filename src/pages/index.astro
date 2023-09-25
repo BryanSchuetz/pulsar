@@ -1,12 +1,9 @@
 ---
-import { formatPosts } from "../js/utils";
-import BlogPreview from '../components/BlogPreview.svelte';
+import BlogPreview from '../components/BlogPreview.astro';
 import MainLayout from '../layouts/MainLayout.astro'
-import { getCollection, getEntry } from 'astro:content';
-const allPosts = await getCollection('posts');
-const formattedPosts = formatPosts(allPosts);
-const recentPosts = formattedPosts.slice(0, 3);
+let name = "Bryan Schuetz"
 ---
+
 <MainLayout title="The Distress Signal">
   <div class="bg-white py-14 ">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -17,6 +14,6 @@ const recentPosts = formattedPosts.slice(0, 3);
       </div>
     </div>
   </div>
-  <BlogPreview posts={recentPosts} />  
+  <BlogPreview />  
 </MainLayout>
 

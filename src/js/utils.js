@@ -33,6 +33,14 @@ export  function readableDate(date) {
     }).toFormat("LLLL d, y");
   }
 
+// Format date as relative string
+export function relativeDate(date) {
+  return DateTime.fromJSDate(date, {
+    zone: "utc",
+  }).toRelative({});
+}
+
+
 // Generate limited html excerpt from a markdown file
 import marked from 'marked'
 const excerptLength = 250

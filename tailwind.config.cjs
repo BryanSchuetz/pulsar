@@ -4,14 +4,14 @@ module.exports = {
 	theme: {
 		extend: {
       colors: {
-        'SignalPurp': '#7F69F5',
-        'SignalTeal': '#92FEE4',
-        'SignalGreen': '#97FF7D',
+        'SignalPurp': '#855fbf',
+        'SignalTeal': '#007e90',
+        'SignalGreen': '#008504',
         'SignalYellow': '#FFFF80',
-        'SignalOrange': '#F4C179',
-        'SignalRed': '#ED8673',
-        'SignalPink': '#EA6FAF',
-        'SignalBlack': '#1A1921',
+        'SignalOrange': '#a0651b',
+        'SignalRed': '#d82f39',
+        'SignalPink': '#c13f8e',
+        'SignalBlack': '#282A36',
       },
     },
 	},

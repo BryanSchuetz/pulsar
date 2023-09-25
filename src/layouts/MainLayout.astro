@@ -2,19 +2,14 @@
 // import props from pages
 const { title } = Astro.props
 // import components
-import Head from '../components/Head.svelte'
-import Header from '../components/Header.svelte'
+import Head from '../components/Head.astro'
+import Header from '../components/Header.astro'
 import Breakpoints from '../components/Breakpoints.astro'
-// import data from content collections
-import { getEntry } from 'astro:content';
-const navlinks = await getEntry('mydata', 'nav');
-// format data in something easier for Svelte to work with
-const links = navlinks.data
 ---
 <html lang="en">
   <Head title={title}/>
 	<body>
-    <Header links={links} client:load/>
+    <Header/>
     <slot></slot>
     <Breakpoints />
 	</body>

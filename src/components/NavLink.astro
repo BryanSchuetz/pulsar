@@ -1,0 +1,24 @@
+---
+const { href, text, icon } = Astro.props
+
+import { PenSquare, GitBranchPlus, PocketKnife, Music4 } from 'lucide-astro'
+
+const iconComponents: IconComponents = {
+  PenSquare,
+  GitBranchPlus,
+  PocketKnife,
+  Music4
+}
+const IconComponent = iconComponents[icon];
+
+//TypeShit
+type IconComponents = {
+  [key: string]: any;
+  PenSquare: typeof PenSquare;
+  GitBranchPlus: typeof GitBranchPlus;
+  PocketKnife: typeof PocketKnife;
+  Music4: typeof Music4;
+}
+---
+
+<a href={href} class="text-sm font-semibold leading-6 text-gray-900"><IconComponent class={"inline mr-1 relative -top-[2px]"} />{text}</a>

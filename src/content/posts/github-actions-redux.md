@@ -1,6 +1,7 @@
 ---
 title: 'Github Actions V2: Build and Deploy Jekyll'
 category: web-development
+description: Late last year—after I got my invitation into the beta of Github Actions—[I wrote up](https://distresssignal.org/github-actions) a quick little action and workflow for building and deploying a Jekyll repo back to its gh-pages branch. Mostly I just wanted to see how actions worked. But, this was also a nice way to build a Jekyll site with my own custom gems and buildscripts while still keeping the enitre workflow on Github—which is my preference.
 pubDate: 2019-10-05 22:00:00 Z
 tags:
 - Jekyll
