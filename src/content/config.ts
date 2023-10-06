@@ -10,6 +10,15 @@ const mydata = defineCollection({
       icon: z.string(),
     })),
 });
+const music = defineCollection({
+  type: 'data',
+  schema: z.array(z.object({
+      album: z.string(),
+      artist: z.string(),
+      link: z.string(),
+      image: z.string(),
+    })),
+});
 const posts = defineCollection({ 
   type: 'content',
   schema: z.object({
@@ -26,4 +35,5 @@ const posts = defineCollection({
 export const collections = {
   'mydata': mydata,
   'posts': posts,
+  'music': music,
 };

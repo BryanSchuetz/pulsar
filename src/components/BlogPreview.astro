@@ -15,15 +15,15 @@ import { marked } from 'marked';
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {recentPosts.map((post: CollectionEntry<"posts">) =>(
         <article class="flex max-w-xl flex-col items-start justify-start">
-        <div class="flex items-center gap-x-4 text-xs">
-          <time datetime="2020-03-16" class="text-gray-500">{relativeDate(post.data.pubDate)}</time>
-          <a href="#" class="relative font-medium text-SignalRed">{post.data.category}</a>
-        </div>
         <div class="relative">
-          <h3 class="my-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"><a href="${post.slug}">{post.data.title}</a></h3>
+          <h3 class="my-3 text-2xl font-semibold leading-6 text-gray-900 group-hover:text-gray-600"><a href={`/posts/${post.slug}`}>{post.data.title}</a></h3>
             <div class="mt-5 text-gray-600 prose">
               <Fragment set:html={marked.parse(post.data.description || '')} />
             </div>
+        </div>
+        <div class="flex items-center gap-x-4 text-xs">
+          <time datetime="2020-03-16" class="text-gray-500">{relativeDate(post.data.pubDate)}</time>
+          <a href="#" class="relative font-medium text-SignalRed">{post.data.category}</a>
         </div>
       </article>
       ))}

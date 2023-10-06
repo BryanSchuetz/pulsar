@@ -10,7 +10,7 @@ tags:
 socialImage: '/images/dry-the-rain.png'
 ---
 
-> "I will now sell five copies of The Three EP's by The Beta Band".
+> I will now sell five copies of The Three EP's by The Beta Band.
 
 ![screenshot](/images/three-eps.png)
 
