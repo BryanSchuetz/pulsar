@@ -17,16 +17,16 @@ const { Content } = await entry.render();
   <div class="bg-white py-14 ">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
-        <p class="text-1xl md:text-2xl font-semibold leading-7 text-SignalPurp">The</p>
+        <!-- <p class="text-1xl md:text-2xl font-semibold leading-7 text-SignalPurp">The</p> -->
         <a href="/">
-          <h1 transition:name="leade" transition:animate="slide" class="mt-2 text-4xl font-bold tracking-tight text-SignalBlack md:text-6xl">Distress Signal</h1>
+          <h1 transition:name="leade" transition:animate="fade" class="mt-2 text-6xl font-bold tracking-tight text-SignalBlack md:text-8xl">{entry.data.title}</h1>
         </a>
-        <p class="mt-6 text-lg leading-8 text-SignalBlack">A personal hypertext of <a href="https://twitter.com/Z3r0_Gravitas">Bryan Schuetz</a></p>
+        <p class="mt-6 text-lg leading-8 text-SignalBlack">Posted <time datetime="2020-03-16" class="text-SignalRed">{relativeDate(entry.data.pubDate)}</time> on <a href="/">The Distress Signal</a> | <span class="text-SignalOrange">{entry.data.category}</span></p>
       </div>
       <div class="bg-white px-6 py-32 lg:px-8">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-          <h1 class="mt-2 text-3xl font-bold tracking-tight text-SignalBlack sm:text-4xl">{entry.data.title}</h1>
-          <p class="text-base font-semibold leading-7 text-SignalOrange">{entry.data.category} | <time datetime="2020-03-16" class="text-gray-500">{relativeDate(entry.data.pubDate)}</time></p>
+          <!-- <h1 class="mt-2 text-3xl font-bold tracking-tight text-SignalBlack sm:text-4xl">{entry.data.title}</h1>
+          <p class="text-base font-semibold leading-7 text-SignalOrange">{entry.data.category} | <time datetime="2020-03-16" class="text-gray-500">{relativeDate(entry.data.pubDate)}</time></p> -->
           <div class="mt-10 max-w-2xl prose text-SignalBlack">
             <Content />
           </div>
