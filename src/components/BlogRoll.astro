@@ -3,9 +3,7 @@ import { formatPosts } from "../js/utils";
 import { getCollection } from 'astro:content';
 import {readableDate,relativeDate } from '../js/utils.js'
 import type { CollectionEntry } from "astro:content";
-const allPosts = await getCollection('posts',({ data }) => {
-  return data.category == 'web-development';
-});
+const allPosts = await getCollection('posts');
 const formattedPosts = formatPosts(allPosts);
 import { marked } from 'marked';
 ---
