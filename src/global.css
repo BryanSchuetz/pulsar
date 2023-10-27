@@ -1,0 +1,12 @@
+body a:not(.plain){
+  color: var(--tw-prose-links);
+  text-decoration: underline;
+  font-weight: 500;
+  text-decoration-color: #007e90;
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 2px;
+}
+
+body a.plain{
+  color: #007e90;
+}
