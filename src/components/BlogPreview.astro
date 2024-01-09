@@ -23,7 +23,7 @@ import { marked } from 'marked';
         </div>
         <div class="flex items-center gap-x-4 text-xs">
           <time datetime="" class="text-gray-500">{relativeDate(post.data.pubDate)}</time>
-          <a href="#" class="plain relative font-medium text-SignalRed">{post.data.category}</a>
+          <a href={`/categories/${post.data.category}`} class="plain relative font-medium text-SignalRed">{post.data.category}</a>
         </div>
       </article>
       ))}
