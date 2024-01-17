@@ -1,6 +1,9 @@
 ---
-title: Keyboards
+title: Switch Activated Input Devices
 pubDate: 2024-01-09 17:00:00 Z
+tags: 
+  - keyboards
+  - gear
 category: keyboards
 ---
 
