@@ -21,4 +21,18 @@ type IconComponents = {
 }
 ---
 
-<a href={href} class="plain -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"><IconComponent class={"inline mr-1 relative -top-[2px]"}/>{text}</a>
+<a href={href} class="plain -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" id={text}><IconComponent class={"inline mr-1 relative -top-[2px]"}/>{text}</a>
+
+<script >
+      function handleClick () {
+        const menuContainer = document.getElementById('menu');
+        const menuBackground = document.getElementById('menu-background');
+        const menuToggle = document.getElementById('menu-toggle-svg');
+        menuContainer.classList.toggle("invisible")
+        menuBackground.classList.toggle("invisible")
+        menuToggle.classList.toggle("active")
+      }
+      document.getElementById("Blog").addEventListener("click", handleClick);
+      document.getElementById("Music").addEventListener("click", handleClick);
+      
+    </script>
