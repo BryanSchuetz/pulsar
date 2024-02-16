@@ -22,7 +22,7 @@ const navs = navlinks.data
     <div class="z-[11] flex self-start lg:hidden"></div>
     <div class="hidden lg:flex lg:gap-x-12">
       {navs.map((link) =>(
-      <NavLink href="{link.href}" text="{link.name}" icon="{link.icon}" />
+      <NavLink href={link.href} text={link.name} icon={link.icon} />
       ))}
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -108,9 +108,9 @@ const navs = navlinks.data
       <div class="[@media(min-width:640px)]:mt-8">
         {navs.map((link)=>(
         <MobileNavLink
-          href="{link.href}"
-          text="{link.name}"
-          icon="{link.icon}"
+          href={link.href}
+          text={link.name}
+          icon={link.icon}
         />
         ))}
       </div>
