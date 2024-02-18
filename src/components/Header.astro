@@ -76,12 +76,10 @@ const navs = navlinks.data
       function handleClick() {
         const menuContainer = document.getElementById("menu");
         const menuBackground = document.getElementById("menu-background");
-        menuContainer.classList.toggle("invisible");
-        menuBackground.classList.toggle("invisible");
+        menuContainer?.classList.toggle("invisible");
+        menuBackground?.classList.toggle("invisible");
       }
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", handleClick);
+      document.getElementById("menu-toggle")?.addEventListener("click", handleClick);
     </script>
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div

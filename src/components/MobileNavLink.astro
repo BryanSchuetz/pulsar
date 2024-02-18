@@ -1,9 +1,9 @@
 ---
 const { href, text, icon } = Astro.props
-// @ts-ignore 
+
 import { PenSquare, GitBranchPlus, PocketKnife, Music4 } from 'lucide-astro'
 
-const iconComponents: IconComponents = {
+const iconComponents: componentObject = {
   PenSquare,
   GitBranchPlus,
   PocketKnife,
@@ -11,28 +11,27 @@ const iconComponents: IconComponents = {
 }
 const IconComponent = iconComponents[icon];
 
-//TypeShit
-type IconComponents = {
-  [key: string]: any;
-  PenSquare: typeof PenSquare;
-  GitBranchPlus: typeof GitBranchPlus;
-  PocketKnife: typeof PocketKnife;
-  Music4: typeof Music4;
+//typeshit
+type componentObject = {
+  [key: string]: any
+  PenSquare: typeof PenSquare
+  GitBranchPlus: typeof GitBranchPlus
+  PocketKnife: typeof PocketKnife
+  Music4: typeof Music4
 }
 ---
 
 <a href={href} class="plain -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" id={text}><IconComponent class={"inline mr-1 relative -top-[2px]"}/>{text}</a>
 
 <script >
-      function handleClick () {
-        const menuContainer = document.getElementById('menu');
-        const menuBackground = document.getElementById('menu-background');
-        const menuToggle = document.getElementById('menu-toggle-svg');
-        menuContainer.classList.toggle("invisible")
-        menuBackground.classList.toggle("invisible")
-        menuToggle.classList.toggle("active")
-      }
-      document.getElementById("Blog").addEventListener("click", handleClick);
-      document.getElementById("Music").addEventListener("click", handleClick);
-      
-    </script>
+  function handleClick () {
+    const menuContainer = document.getElementById('menu')
+    const menuBackground = document.getElementById('menu-background')
+    const menuToggle = document.getElementById('menu-toggle-svg')
+    menuContainer?.classList.toggle("invisible")
+    menuBackground?.classList.toggle("invisible")
+    menuToggle?.classList.toggle("active")
+  }
+  document.getElementById("Blog")?.addEventListener("click", handleClick)
+  document.getElementById("Music")?.addEventListener("click", handleClick)
+</script>

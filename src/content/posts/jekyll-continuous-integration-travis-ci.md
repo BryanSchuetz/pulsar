@@ -15,7 +15,7 @@ Of course, you could just build the site locally, and then deploy it—but if th
 
 One way around GitHub’s restrictions that I’ve been considering lately is using a continuous integration service like [Travis CI](https://travis-ci.org). Basically, Travis looks for updates to a GitHub repo, clones the given branch, builds the site, runs any post-build scripts you want, and then commits the site straight to the GH-Pages branch for hosting.
 
-![Travis Output](images/travis.jpg)
+![Travis Output](/images/travis.jpg)
 
 This lets authors and content managers, using something like [Siteleaf](http://v2.siteleaf.com), add content as they wish—when they hit publish and the changes are sync’d to the repo, Travis takes over, builds the site, and then deploys it back to GitHub. Travis is primarily used for testing code in pull requests before merging it with a master branch. If we wanted to include tests into our workflow we could, but I’m mostly just interested in using it to build and deploy.
 
