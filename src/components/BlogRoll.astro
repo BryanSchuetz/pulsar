@@ -11,7 +11,7 @@ import { marked } from 'marked';
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-4xl">
       <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 ">
-      {formattedPosts.map((post: CollectionEntry<"posts">, index:number) =>(
+      {formattedPosts.map((post:CollectionEntry<"posts">, index:number) =>(
         <article class={`flex p-4 mb-4 max-w-xl flex-col items-start justify-between ${index === 0 ? '' : ''}`}>
           <div class="flex items-center gap-x-4 text-xs">
             <time datetime="2020-03-16" class="text-gray-500">{relativeDate(post.data.pubDate)}</time>
