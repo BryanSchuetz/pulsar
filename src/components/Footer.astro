@@ -1,7 +1,24 @@
 ---
-
+import {Rocket, Handshake } from 'lucide-astro'
 ---
-<footer class="bg-white">
+<footer class="bg-white pt-4">
+  <!-- Some hacky shit to throw a speedlify score on there. @todo build this as an actual astro component -->
+  <script is:inline src="/node_modules/speedlify-score/speedlify-score.js"/>
+  <div class="bg-white shadow sm:rounded-lg mr-auto ml-auto max-w-xl mb-10">
+    <div class="px-4 py-5 sm:p-6 text-center">
+      <h3 class="text-base font-semibold leading-6 text-gray-900">Built With Astro <Rocket class={"inline mr-1 relative -top-[2px]"} /></h3>
+      <div class="mt-2 max-w-xl text-sm text-gray-500">
+        <p><Handshake class={"inline mr-1 relative -top-[2px]"} /> mode:static / <Handshake class={"inline mr-1 relative -top-[2px]"}/> Cloudflare / <Handshake class={"inline mr-1 relative -top-[2px]"}/> Tailwind / <Handshake class={"inline mr-1 relative -top-[2px]"}/> astro:content</p>
+      </div>
+      <div class="mt-3 text-sm leading-6 flex justify-center items-center mb-2">
+        <speedlify-score speedlify-url="https://snazzy-bombolone-aaba7c.netlify.app/" hash="e3ed73ac">
+        
+      </div>
+      <a href="https://hyperdrive-speedometer.netlify.app/" class="font-semibold plain">
+        Rank on Hyperdrive <span aria-hidden="true"> &rarr;</span>
+      </a>
+    </div>
+  </div>
   <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
     <div class="flex justify-center space-x-6 md:order-2">
       <p class="text-center text-xs leading-5 text-SignalBlack">Made in the  <span class="font-bold">Douglass Commonwealth</span>.</p>
@@ -11,7 +28,4 @@
       <p class="text-center text-xs leading-5 text-gray-500">&copy;  Post hoc, ergo propter hoc.</p>
     </div>    
   </div>
-<!-- Some hacky shit to throw a speedlify score on there. @todo build this as an actual astro component -->
-  <script is:inline src="/node_modules/speedlify-score/speedlify-score.js"/>
-  <speedlify-score speedlify-url="https://snazzy-bombolone-aaba7c.netlify.app/" hash="e3ed73ac">
 </footer>
