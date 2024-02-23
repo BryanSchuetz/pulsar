@@ -5,12 +5,19 @@ tags:
   - keyboards
   - gear
 category: keyboards
+description: At this point, talking about keyboards seems a bit cliché. Still, like the hipster who was a fan of that band before they made it big and sold out—I do feel compelled to pull out my recipts and say a few things on the subject. As a child of the 80s, I grew up with some [cool keyboards](https://deskthority.net/wiki/Radio_Shack_TRS-80_Model_I). The caps were tall and shiny, the layouts were odd, and the cases were loud and full of echo.
 ---
 
 At this point, talking about keyboards seems a bit cliché. Still, like the hipster who was a fan of that band before they made it big and sold out—I do feel compelled to pull out my recipts and say a few things on the subject.
 
-As a child of the 80s, I grew up with some [cool keyboards](https://deskthority.net/wiki/Radio_Shack_TRS-80_Model_I). The caps were tall and shiny, the layouts were odd, and the cases were loud and full of echo. When I landed my first real job out of grad school—I had a modern take on the [AEK II](https://deskthority.net/wiki/Matias_Tactile_Pro) and it was all I needed (2003). By the time [Jeff Atwood](https://blog.codinghorror.com/the-code-keyboard/) announced he was working with WASD to build the ultimate TKL (2013), it was an instabuy for me—and I started to think about things like plate material, dye-sublimation. 
+As a child of the 80s, I grew up with some [cool keyboards](https://deskthority.net/wiki/Radio_Shack_TRS-80_Model_I). The caps were tall and shiny, the layouts were odd, and the cases were loud and full of echo. When I landed my first real job out of grad school—I had a modern take on the [AEK II](https://deskthority.net/wiki/Matias_Tactile_Pro) and it was all I needed (2003). By the time [Jeff Atwood](https://blog.codinghorror.com/the-code-keyboard/) announced he was working with WASD to build the ultimate TKL (2013), it was an instabuy for me—and I started to think about things like plate material and dye-sublimation. 
 
-A couple years later I was on Geekhack, then on the MK subreddit—I got into [40s](https://trashman.wiki/keyboards/kumo), and finally learned how to build my own keyboard firmware with [QMK](https://github.com/qmk/qmk_firmware). In retrospect, this was the tipping point. I mean, I do like nice keyboards. 
+A couple years later I was on Geekhack, then on the MK subreddit—I got into [40s](https://trashman.wiki/keyboards/kumo), [orthos](https://olkb.com/), [split columnar staggered orthos](https://imkulio.com/), [Topre](https://hhkeyboard.us/), [split row stagger](https://www.primekb.com/products/meridian-r3), and back to [standard qwerty](https://omnitype.com/pages/bauer-lite). Along the way I learned how to build my own keyboard firmware with [QMK](https://github.com/qmk/qmk_firmware)—in retrospect, this was the tipping point. 
 
+## QMK, SpaceFN, HYPR, Split Backspace, Win-Key Blockers
 
+![Bauer Lite](/images/bauer-layout.png)
+
+I mean, I do like nice keyboards—but adding arrows to the home row (AKA: [SpaceFN](https://geekhack.org/index.php?topic=51069.0)) and adjusting the layout to be _exactly what I want_ is what the whole thing is really about. **SpaceFN works like this**: you hold down the spacebar and it activates a new 'layer' of input—what used to be the 'i', 'j', 'k', and 'l' keys are now the 'up', 'left', 'down', and 'right' keys. So you can navigate around without ever having to leave the home row, it's a huge quality of life upgrade for using your computer. Then I swap out CapsLock for a 'Hyper' key—Alt+Ctrl+Shift+Command, which I use for all my shortcuts—avoiding colisions with existing system or application shortcuts. Split backspace, split right shift, win-key blockers, macro keys, application triggers, tap dancing, and on and on. 
+
+It's all about taking control of your keyboard—and making it the way you want it. The truth is, you don't even need a custom board to do this. If you're on MacOS you can use [Karabiner](https://karabiner-elements.pqrs.org/) to setup a SpaceFN layout, and remap Pipe to a split backspace. This is how I have my laptop keyboard setup, so it's still usable to me when I need to jump on for something quick. [Here](https://gist.github.com/BryanSchuetz/5bfff4ae061505d01f4d54b6ec0e966a) is a Gist of my Karabiner config that sets up SpaceFN if you're interested in giving this a shot.

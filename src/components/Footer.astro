@@ -1,14 +1,14 @@
 ---
 import {Rocket, Handshake } from 'lucide-astro'
 ---
-<footer class="bg-white pt-4">
+<footer class="bg-white pt-16">
   <!-- Some hacky shit to throw a speedlify score on there. @todo build this as an actual astro component -->
   <script is:inline src="/node_modules/speedlify-score/speedlify-score.js"/>
   <div class="bg-white shadow sm:rounded-lg mr-auto ml-auto max-w-xl mb-10">
     <div class="px-4 py-5 sm:p-6 text-center">
       <h3 class="text-base font-semibold leading-6 text-gray-900">Built With Astro <Rocket class={"inline mr-1 relative -top-[2px]"} /></h3>
       <div class="mt-2 max-w-xl text-sm text-gray-500">
-        <p><Handshake class={"inline mr-1 relative -top-[2px]"} /> mode:static / <Handshake class={"inline mr-1 relative -top-[2px]"}/> Cloudflare / <Handshake class={"inline mr-1 relative -top-[2px]"}/> Tailwind / <Handshake class={"inline mr-1 relative -top-[2px]"}/> astro:content</p>
+        <p>mode:static  <Handshake class={"inline h-5 w-5 mr-1 relative -top-[2px]"}/> Cloudflare  <Handshake class={"inline h-5 w-5 mr-1 relative -top-[2px]"}/> Tailwind  <Handshake class={"inline h-5 w-5 mr-1 relative -top-[2px]"}/> astro:content</p>
       </div>
       <div class="mt-3 text-sm leading-6 flex justify-center items-center mb-2">
         <speedlify-score speedlify-url="https://snazzy-bombolone-aaba7c.netlify.app/" hash="e3ed73ac">
