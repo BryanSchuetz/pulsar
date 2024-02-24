@@ -22,7 +22,7 @@ const { Content } = await entry.render();
         <p class="mt-6 text-lg leading-8 text-SignalBlack">Posted <time datetime="2020-03-16" class="text-SignalRed">{relativeDate(entry.data.pubDate)}</time> on <a class="text-SignalPurp" href="/">The Distress Signal</a> | <span class="text-SignalOrange"><a href={`/categories/${entry.data.category}`} class="plain">{entry.data.category}</a></span></p>
       </div>
       <div class="bg-white px-6 py-16 lg:px-8">
-        <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <div class="mx-auto max-w-[42rem] text-base leading-7 text-gray-700">
           <!-- <h1 class="mt-2 text-3xl font-bold tracking-tight text-SignalBlack sm:text-4xl">{entry.data.title}</h1>
           <p class="text-base font-semibold leading-7 text-SignalOrange">{entry.data.category} | <time datetime="2020-03-16" class="text-gray-500">{relativeDate(entry.data.pubDate)}</time></p> -->
           <div class="mt-10 max-w-2xl prose text-SignalBlack">
