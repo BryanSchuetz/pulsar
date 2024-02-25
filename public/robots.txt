@@ -1,0 +1,3 @@
+//index and follow
+User-agent: *
+Disallow: 
