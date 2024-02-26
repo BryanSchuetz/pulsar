@@ -16,7 +16,7 @@ import { marked } from 'marked';
       {recentPosts.map((post: CollectionEntry<"posts">) =>(
         <article class="flex max-w-xl flex-col items-start justify-start">
         <div class="relative">
-          <h3 class="my-3 text-2xl font-semibold leading-6 text-gray-900 group-hover:text-gray-600"><a class="plain" href={`/posts/${post.slug}`}>{post.data.title}</a></h3>
+          <h2 class="my-3 text-2xl font-semibold leading-6 text-gray-900 group-hover:text-gray-600"><a class="plain" href={`/posts/${post.slug}`}>{post.data.title}</a></h2>
             <div class="mt-5 text-gray-600 prose">
               <Fragment set:html={marked.parse(post.data.description || '')} />
             </div>
