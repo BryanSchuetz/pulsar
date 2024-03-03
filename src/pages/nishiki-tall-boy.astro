@@ -1,6 +1,8 @@
 ---
 import { Linkedin } from "lucide-astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import theBike from "../images/nishiki-cresta-rivified.jpeg";
+import { Image } from "astro:assets";
 ---
 <MainLayout title="Uses">
   <div class="bg-white py-14">
@@ -13,7 +15,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           <!-- <h1 class="mt-2 text-3xl font-bold tracking-tight text-SignalBlack sm:text-4xl">{entry.data.title}</h1>
           <p class="text-base font-semibold leading-7 text-SignalOrange">{entry.data.category} | <time datetime="2020-03-16" class="text-gray-500">{relativeDate(entry.data.pubDate)}</time></p> -->
           <div class="mt-10 max-w-2xl prose text-SignalBlack">
-            <img src="/images/nishiki-cresta-rivified.jpeg" alt="">
+            <Image src={theBike} alt="Nishiki Cresta" class="rounded-sm" width={672} height={504} />
                 <p>Several years ago I found this beat up old 80s road bike by Nishiki. The Nishiki Cresta was a mid tier touring bike handmade in Japan for the U.S. market during the glory years (mid-80s) of bike imports from Japan. Built with Tange2 double butted steel tubing—these frames are still somewhat sought after. The unique steel blend offers a nice combination of durability, and comfort—where the steel does a much better job than more modern materials at absorbing road vibrations and providing a comfy ride.</p>
                 <p>I took the frame and slowly started to replace everything on it. I stretched the forks out so I could run a 700c wheel, got a huge quill stem and swept back bars to improve the riding geometry. Added a mullet drivetrain—a single crank up front with a wide range mountain bike set on the back. Added a thumby shifter, a rack and bag, better caliper brakes, and other odds and ends.</p>
                 <p>I'd love a bit more clearance to run some fatter tires, and some cantis—but it's mostly where I want it at this point. Living in the city I get to ride quite a lot while running errands and the like.</p>
