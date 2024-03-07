@@ -32,8 +32,8 @@ const { Content } = await entry.render();
       </div>
     </div>
   </div>
-  <script is:inline type="module">
-    import '/src/js/fslightbox.js'
+  <script is:inline src="/src/js/fslightbox.js"></script>
+  <script is:inline >
     const images = document.querySelectorAll('.gallery img');
     
     // Lightbox function
