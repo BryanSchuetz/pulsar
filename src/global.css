@@ -14,3 +14,6 @@ body .prose a{
   text-decoration: none;
   color: #007e90;
 }
+pre{
+  white-space: pre-wrap;
+}
