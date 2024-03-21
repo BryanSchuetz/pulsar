@@ -32,21 +32,4 @@ const { Content } = await entry.render();
       </div>
     </div>
   </div>
-  <script is:inline type="module">
-    import '/js/fslightbox.js';
-    const images = document.querySelectorAll('.gallery img');
-    
-    // Lightbox function
-    images.forEach(function (image) {
-      var wrapper = document.createElement('a');
-      wrapper.setAttribute('data-no-swup', '');
-      wrapper.setAttribute('data-fslightbox', '');
-      wrapper.setAttribute('href', image.src);
-      wrapper.setAttribute('aria-label', 'Click for Lightbox');
-      image.parentNode.insertBefore(wrapper, image.parentNode.firstChild);
-      wrapper.appendChild(image);
-    });
-    
-    refreshFsLightbox();
-  </script>
 </MainLayout>
