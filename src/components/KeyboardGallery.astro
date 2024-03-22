@@ -1,0 +1,38 @@
+---
+import Endgame from '/src/images/keyboards/endgame.jpeg';
+import {Image} from 'astro:assets';
+const images = import.meta.glob('/src/images/keyboards/*.jpeg')
+const imageArray = Object.entries(images);
+---
+<div class="gallery">
+  <figure>
+    <Image src={Endgame} alt="A hype cyberboard" infersize />
+    <figcaption>Above, my current daily driver—a <strong>Bauer Lite Small Batch 0 2/10</strong>. Below, some of my previous 'CYberDEcKs'.</figcaption>
+  </figure>
+  
+  <div class="grid grid-cols-5 gap-4">
+  {imageArray .map(([key, value]) => (
+    <div class="flex items-center overflow-hidden">
+      <Image class="mt-0 mb-0 max-h-full w-auto rounded-lg" src={key} alt="A hype cyberboard" width="100%" height="100%" />
+    </div>
+  ))}
+  </div>
+</div>
+
+<script is:inline type="module">
+  import '/js/fslightbox.js';
+  const images = document.querySelectorAll('.gallery img');
+  
+  // Lightbox function
+  images.forEach(function (image) {
+    var wrapper = document.createElement('a');
+    wrapper.setAttribute('data-no-swup', '');
+    wrapper.setAttribute('data-fslightbox', '');
+    wrapper.setAttribute('href', image.src);
+    wrapper.setAttribute('aria-label', 'Click for Lightbox');
+    image.parentNode.insertBefore(wrapper, image.parentNode.firstChild);
+    wrapper.appendChild(image);
+  });
+  
+  refreshFsLightbox();
+</script>
