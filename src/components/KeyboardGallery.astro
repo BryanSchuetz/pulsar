@@ -1,28 +1,65 @@
 ---
-import Endgame from '/src/images/keyboards/endgame.jpeg';
 import {Image} from 'astro:assets';
-const images = import.meta.glob('/src/images/keyboards/*.jpeg')
-const imageArray = Object.entries(images);
+import Endgame from '/src/images/keyboards/endgame.jpeg';
+import Applecoren from '/src/images/keyboards/applecoren.jpeg';
+import Arcextended from '/src/images/keyboards/arcextended.jpeg';
+import Arcmtnu from '/src/images/keyboards/arcmtnu.jpeg';
+import Bauerextended from '/src/images/keyboards/bauerextended.jpeg';
+import Cornes1 from '/src/images/keyboards/cornes1.jpeg';
+import Cornes2 from '/src/images/keyboards/cornes2.jpeg';
+import Fauxpro from '/src/images/keyboards/fauxpro.jpeg';
+import Imkcorne from'/src/images/keyboards/imkcorne.jpeg';
+import Meridian from '/src/images/keyboards/meridian.jpeg';
+import Niumini from '/src/images/keyboards/niumini.jpeg';
+import Qk60 from '/src/images/keyboards/qk60.jpeg';
+import Smallbatch5 from '/src/images/keyboards/smallbatch5.jpeg';
+import Stormtrooper from '/src/images/keyboards/stormtrooper.jpeg';
+import Sutra from '/src/images/keyboards/sutra.jpeg';
+import Topreh from '/src/images/keyboards/topreh.jpeg';
+import Topreh2 from '/src/images/keyboards/topreh2.jpeg';
+import Tvk from '/src/images/keyboards/tvk.jpeg';
+import Valhalla from '/src/images/keyboards/valhalla.jpeg';
+
+let images = [
+  Applecoren,
+  Arcextended,
+  Arcmtnu,
+  Bauerextended,
+  Cornes1,
+  Cornes2,
+  Fauxpro,
+  Imkcorne,
+  Meridian,
+  Niumini,
+  Qk60,
+  Smallbatch5,
+  Stormtrooper,
+  Sutra,
+  Topreh,
+  Topreh2,
+  Tvk,
+  Valhalla
+];
 ---
 <div class="gallery">
   <figure>
-    <Image src={Endgame} alt="A hype cyberboard" infersize />
+    <Image src={Endgame} alt="A hype cyberboard" inferSize/>
     <figcaption>Above, my current daily driver—a <strong>Bauer Lite Small Batch 0 2/10</strong>. Below, some of my previous 'CYberDEcKs'.</figcaption>
   </figure>
-  
+
   <div class="grid grid-cols-5 gap-4">
-  {imageArray .map(([key, value]) => (
-    <div class="flex items-center overflow-hidden">
-      <Image class="mt-0 mb-0 max-h-full w-auto rounded-lg" src={key} alt="A hype cyberboard" width="100%" height="100%" />
-    </div>
-  ))}
+    {images.map((image) => (
+      <div class="flex items-center overflow-hidden">
+        <Image class="mt-0 mb-0 max-h-full w-auto rounded-lg" src={image} alt="A hype cyberboard" inferSize />
+      </div>
+    ))}
   </div>
 </div>
 
 <script is:inline type="module">
   import '/js/fslightbox.js';
   const images = document.querySelectorAll('.gallery img');
-  
+
   // Lightbox function
   images.forEach(function (image) {
     var wrapper = document.createElement('a');
@@ -33,6 +70,6 @@ const imageArray = Object.entries(images);
     image.parentNode.insertBefore(wrapper, image.parentNode.firstChild);
     wrapper.appendChild(image);
   });
-  
+
   refreshFsLightbox();
 </script>
