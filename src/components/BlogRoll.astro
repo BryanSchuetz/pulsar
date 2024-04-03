@@ -1,18 +1,18 @@
 ---
 import { formatPosts } from "../js/utils";
 import { getCollection } from 'astro:content';
-import {readableDate,relativeDate } from '../js/utils.js'
+import {relativeDate } from '../js/utils.js'
 import type { CollectionEntry } from "astro:content";
 const allPosts = await getCollection('posts');
 const formattedPosts = formatPosts(allPosts);
-import { marked } from 'marked';
+import {stripMarkdown} from '../js/utils.js';
 ---
 <div class="bg-white">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-4xl">
       <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 ">
       {formattedPosts.map((post:CollectionEntry<"posts">, index:number) =>(
-        <article class={`flex p-4 mb-4 max-w-xl flex-col items-start justify-between ${index === 0 ? '' : ''}`}>
+        <article class={`flex p-4 mb-4 max-w-xl flex-col items-start ${index === 0 ? '' : ''}`}>
           <div class="flex items-center gap-x-4 text-xs">
             <time datetime="2020-03-16" class="text-gray-500">{relativeDate(post.data.pubDate)}</time>
             <a href={`/categories/${post.data.category}`}
@@ -25,6 +25,7 @@ import { marked } from 'marked';
               {post.data.title}
               </a>
             </h3>
+            <p>{post.data.description && stripMarkdown(post.data.description).substring(0,50)}...</p>
           </div>
         </article>
       ))}

@@ -49,3 +49,19 @@ export function createExcerpt(postBody) {
     const truncatedMarkdown = postBody.substring(0, excerptLength);
     return marked.parse(truncatedMarkdown);
   }
+
+//strip markdown
+export function stripMarkdown(markdown) {
+  return markdown
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '') // Remove image syntax
+    .replace(/\[[^\]]*\]\([^)]*\)/g, '') // Remove link syntax
+    .replace(/`{3}[^`]*`{3}/g, '') // Remove code block syntax
+    .replace(/`[^`]*`/g, '') // Remove inline code syntax
+    .replace(/#{1,6}\s/g, '') // Remove header syntax
+    .replace(/[*_]{1,3}/g, '') // Remove bold/italic syntax
+    .replace(/~~[^~]*~~/g, '') // Remove strikethrough syntax
+    .replace(/>\s/g, '') // Remove blockquote syntax
+    .replace(/\n{2,}/g, '\n') // Replace multiple newlines with a single newline
+    .replace(/-\s/g, '') // Remove list syntax
+    .replace(/\d+\.\s/g, ''); // Remove numbered list syntax
+}
