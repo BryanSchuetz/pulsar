@@ -12,9 +12,9 @@ export async function getStaticPaths() {
 // 2. For your template, you can get the entry directly from the prop
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title = 'The Distress Signal'} = Astro.props.frontmatter || Astro.props;
+const { title = 'The Distress Signal', tagline} = Astro.props.frontmatter || Astro.props;
 ---
-<MainLayout title={title}>
+<MainLayout title={title} tagline={tagline}>
   <div class="bg-white py-14 ">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
