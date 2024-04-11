@@ -1,0 +1,73 @@
+---
+title: 'Rolling My Own Hey Imbox'
+tagline: |
+  'Hey—screen your emails for free.'
+pubDate: 2024-04-10 17:00:00 Z
+tags:
+  - Tooling
+  - Email
+category: tooling
+description: |
+  'I think the email screening features of Hey.com are super useful. I couldn't justify the monthly cost of a subscription there, so I decided to roll my own local versions. Using Applescript, Mail.app, and Raycast, I was able to pretty much replicate the workflow I had when I was using the trial version of Hey. I've been using this setup for a year or so and it's ofically not bad.'
+---
+import { Image } from 'astro:assets'
+
+People do seem to love to hate on [37 Signals](https://37signals.com/), and [DHH](https://twitter.com/dhh) specifically. While I'm not sure how much of it is justified, or how much of it is just a kind of outrage marketing you commonly see on ~~the toxic bird site~~ X these days—one thing I do know is that those guys aren't stupid. So when they decided to '[reinvent email](https://www.hey.com/)', I was curious to see what they'd come up with.
+
+For me, the essential part of it is the email screening. I mean it's a nice web app. I like the design, and the user experience, and there's lots of nice touches. They build nice things—I can't argue with that. But for me, the screening is the thing. The way I used it broke down like this:
+
+- **The Imbox**: This is the IMportant inbox—and it's only got important stuff in it. Communcations from real people. No newsletters, no notifications, no spam. Just the good stuff.
+- **The Paper Trail**: For notifications, receipts, 2factor requests, etc. Basically anything I might need to hang onto for a little bit. Emails from systems, not people.
+- **The Feed**: This one is for newsletters, marketing emails, listserv digests, etc. Stuff I may want to read, but don't need to read right away. More emails from systems, not people.
+
+That's it really—not that complicated. When new email comes in, you tell the system where new email from that sender should land—and then that's where it goes. I found that it worked really well—but it's hard to justify spending $100 a year when I _could_ just setup my own screening locally. So that's what I did.
+
+Since I'm alreayd all in on [Raycast](https://www.raycast.com/) that seemed like the path of least resistance. So I knocked together three script commands that take the currently selected email—moves it into the appropriate mailbox and assigns that sender to a rule that directs all futrue emails from that sender to the same mailbox.
+
+```applescript
+#!/usr/bin/osascript
+
+--screenout.scpt
+
+# Required parameters:
+# @raycast.schemaVersion 1
+# @raycast.title Screen Out
+# @raycast.mode silent
+
+# Optional parameters:
+# @raycast.icon 🤖
+
+# Documentation:
+# @raycast.description Screen this message out of my inbox
+# @raycast.author Bryan Schuetz
+# @raycast.authorURL https://github.com/BryanSchuetz
+
+tell application "Mail"
+  -- Start by getting the sender's address and the message's account
+  set selectedMsgs to selected messages of first message viewer
+  set thisMsg to first item of selectedMsgs
+  set acct to account of mailbox of thisMsg
+  set spamAddr to extract address from sender of thisMsg
+  get acct
+  
+  -- Add that address to a new condition of the rule
+  set psRule to rule "Screened Out"
+  tell psRule
+    set newCondition to make new rule condition at beginning of rule conditions
+    tell newCondition
+      set rule type to from header
+      set qualifier to equal to value
+      set expression to spamAddr
+    end tell
+  end tell
+  
+  -- Delete the message
+  set mailbox of thisMsg to mailbox "Screened Out" of acct
+  
+end tell
+
+```
+I used script commands ([Screen Out](https://github.com/BryanSchuetz/script-commands/blob/master/commands/communication/mail/screen-out.applescript), [Paper Trail](https://github.com/BryanSchuetz/script-commands/blob/master/commands/communication/mail/paper-trail.applescript), [The Feed](https://github.com/BryanSchuetz/script-commands/blob/master/commands/communication/mail/the-feed.applescript)) because I wrote these a million years ago before there even was an actual Raycast extensions API. Maybe one day I'll roll them all up into a proper extension, but for the time being—this is fine. I've got hotkeys for each of them F1, F2, and F3—so processing new and unscreened email is super quick. Finally, I added an auto-archive rule that takes any email older than 60 days and moves it into the archive mailbox.
+
+It all adds up to a fairly automated process—producing nicley trimmed down mailboxes for the three broad categories of email that I get. An IMbox for important email from real people, a Paper Trail for timely notifications and receipts, and a Feed for recent and wanted marketing emails and newsletters. It's not perfect, but it's pretty good—and it's free (as in beer).
+
