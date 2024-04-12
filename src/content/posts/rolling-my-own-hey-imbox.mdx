@@ -22,7 +22,7 @@ For me, the essential part of it is the email screening. I mean it's a nice web 
 
 That's it really—not that complicated. When new email comes in, you tell the system where new email from that sender should land—and then that's where it goes. I found that it worked really well—but it's hard to justify spending $100 a year when I _could_ just setup my own screening locally. So that's what I did.
 
-Since I'm alreayd all in on [Raycast](https://www.raycast.com/) that seemed like the path of least resistance. So I knocked together three script commands that take the currently selected email—moves it into the appropriate mailbox and assigns that sender to a rule that directs all futrue emails from that sender to the same mailbox.
+Since I'm already all in on [Raycast](https://www.raycast.com/) that seemed like the path of least resistance. So I knocked together three script commands that take the currently selected email—moves it into the appropriate mailbox and assigns that sender to a rule that directs all futrue emails from that sender to the same mailbox.
 
 ```applescript
 #!/usr/bin/osascript
@@ -49,7 +49,7 @@ tell application "Mail"
   set acct to account of mailbox of thisMsg
   set spamAddr to extract address from sender of thisMsg
   get acct
-  
+
   -- Add that address to a new condition of the rule
   set psRule to rule "Screened Out"
   tell psRule
@@ -60,14 +60,13 @@ tell application "Mail"
       set expression to spamAddr
     end tell
   end tell
-  
+
   -- Delete the message
   set mailbox of thisMsg to mailbox "Screened Out" of acct
-  
+
 end tell
 
 ```
 I used script commands ([Screen Out](https://github.com/BryanSchuetz/script-commands/blob/master/commands/communication/mail/screen-out.applescript), [Paper Trail](https://github.com/BryanSchuetz/script-commands/blob/master/commands/communication/mail/paper-trail.applescript), [The Feed](https://github.com/BryanSchuetz/script-commands/blob/master/commands/communication/mail/the-feed.applescript)) because I wrote these a million years ago before there even was an actual Raycast extensions API. Maybe one day I'll roll them all up into a proper extension, but for the time being—this is fine. I've got hotkeys for each of them F1, F2, and F3—so processing new and unscreened email is super quick. Finally, I added an auto-archive rule that takes any email older than 60 days and moves it into the archive mailbox.
 
 It all adds up to a fairly automated process—producing nicley trimmed down mailboxes for the three broad categories of email that I get. An IMbox for important email from real people, a Paper Trail for timely notifications and receipts, and a Feed for recent and wanted marketing emails and newsletters. It's not perfect, but it's pretty good—and it's free (as in beer).
-
