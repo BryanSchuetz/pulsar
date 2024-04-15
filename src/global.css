@@ -2,7 +2,13 @@ body a:not(.plain){
   color: var(--tw-prose-links);
   font-weight: 500;
 }
-
+body a.featured{
+  color: #b93d85;
+  text-decoration: none;
+}
+body a.featured:hover{
+  color: #b93d85;
+}
 body a.plain{
   color: #007e90;
   text-decoration: none;
