@@ -1,11 +1,11 @@
 ---
-import { formatPosts } from "../js/utils";
+import { formatPosts } from "@js/utils";
 import { getCollection } from 'astro:content';
-import {relativeDate } from '../js/utils.js'
+import {relativeDate } from '@js/utils.js'
 import type { CollectionEntry } from "astro:content";
 const allPosts = await getCollection('posts');
 const formattedPosts = formatPosts(allPosts);
-import {stripMarkdown} from '../js/utils.js';
+import {stripMarkdown} from '@js/utils.js';
 ---
 <div class="bg-white">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">

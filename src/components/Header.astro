@@ -1,7 +1,7 @@
 ---
-import BadgeCheck from './BadgeCheck.astro'
-import NavLink from './NavLink.astro'
-import MobileNavLink from './MobileNavLink.astro'
+import BadgeCheck from '@components/BadgeCheck.astro'
+import NavLink from '@components/NavLink.astro'
+import MobileNavLink from '@components/MobileNavLink.astro'
 import { getEntry } from 'astro:content';
 const navlinks = await getEntry('mydata', 'nav');
 const navs = navlinks.data
