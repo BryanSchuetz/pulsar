@@ -2,7 +2,7 @@
 import { z, defineCollection } from 'astro:content';
 
 // 2. Define your collection(s)
-const mydata = defineCollection({ 
+const mydata = defineCollection({
   type: 'data',
   schema: z.array(z.object({
       name: z.string(),
@@ -19,7 +19,18 @@ const music = defineCollection({
       image: z.string(),
     })),
 });
-const posts = defineCollection({ 
+const books = defineCollection({
+  type: 'data',
+  schema: z.array(z.object({
+      title: z.string(),
+      author: z.string(),
+      link: z.string(),
+      image: z.string(),
+      description: z.string(),
+      stars: z.number(),
+    })),
+});
+const posts = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
@@ -27,7 +38,7 @@ const posts = defineCollection({
     category: z.string(),
     pubDate: z.date(),
     description: z.string().optional(),
-    tags: z.array(z.string()),    
+    tags: z.array(z.string()),
     }),
 });
 
@@ -37,4 +48,5 @@ export const collections = {
   'mydata': mydata,
   'posts': posts,
   'music': music,
+  'books': books,
 };
