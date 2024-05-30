@@ -6,7 +6,6 @@ export function formatPosts(posts, {
 
   const filteredPosts = posts.reduce((acc, post) => {
       const { pubDate } = post.data;
-
       // filterOutFuturePosts if true
       if (filterOutFuturePosts && new Date(pubDate) > new Date()) {
           return acc;
