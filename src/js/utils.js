@@ -47,7 +47,7 @@ const excerptLength = 250
 export function createExcerpt(postBody) {
     const truncatedMarkdown = postBody.substring(0, excerptLength);
     return marked.parse(truncatedMarkdown);
-  }
+}
 
 //strip markdown
 export function stripMarkdown(markdown) {
