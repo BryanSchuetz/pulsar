@@ -1,0 +1,54 @@
+---
+
+import {Image} from 'astro:assets';
+import bernie from '@images/nishiki/bernie.jpeg';
+import frontend1 from '@images/nishiki/frontend1.jpeg';
+import frontend2 from '@images/nishiki/frontend2.jpeg';
+import frontend3 from '@images/nishiki/frontend3.jpeg';
+import mullet from '@images/nishiki/mullet.jpeg';
+import nishiki from '@images/nishiki/nishiki.jpeg';
+import theBike from "../images/nishiki-cresta-rivified.jpeg";
+
+
+let images = [
+  bernie,
+  frontend1,
+  frontend2,
+  frontend3,
+  mullet,
+  nishiki,
+  theBike
+];
+---
+<div class="gallery">
+  <figure>
+    <Image src={theBike} alt="A hype cyberboard" inferSize/>
+    <figcaption>The poor mans Rivendel: A mid tier 80s tourer, built back better with up to date retro-futurist vibes.</figcaption>
+  </figure>
+
+  <div class="grid grid-cols-5 gap-4">
+    {images.map((image) => (
+      <div class="flex items-center overflow-hidden">
+        <Image class="mt-0 mb-0 max-h-full w-auto rounded-lg" src={image} alt="A hype cyberboard" inferSize />
+      </div>
+    ))}
+  </div>
+</div>
+<script is:inline src="/js/fslightbox.js"></script>
+<script is:inline >
+    //use Astro lifecycle functions to manage how the lightbox is getting spun up and down
+    document.addEventListener('astro:page-load', () => {
+      //initialize the lightbox when the page is first loaded
+      const Galleryimages = document.querySelectorAll('.gallery img')
+      Galleryimages.forEach(function (image) {
+        var wrapper = document.createElement('a');
+        wrapper.setAttribute('data-no-swup', '');
+        wrapper.setAttribute('data-fslightbox', '1');
+        wrapper.setAttribute('href', image.src);
+        wrapper.setAttribute('aria-label', 'Click for Lightbox');
+        image.parentNode.insertBefore(wrapper, image.parentNode.firstChild);
+        wrapper.appendChild(image);
+      });
+      refreshFsLightbox()
+    }, { once: true });
+</script>
