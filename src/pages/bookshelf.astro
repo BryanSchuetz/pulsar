@@ -1,14 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { formatPosts } from "@js/utils";
+import { getCollection } from 'astro:content';
+import {readableDate,relativeDate } from '@js/utils.js'
+import type { CollectionEntry } from "astro:content";
+const allPosts = await getCollection('books');
+const formattedPosts = formatPosts(allPosts);
+const recentPosts = formattedPosts.slice(0, 3);
+import { marked } from 'marked';
 ---
 <MainLayout title="Bookshelf">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
-        <h1 transition:name="leade" transition:animate="fade" class="mt-2 text-6xl font-bold tracking-tight text-SignalBlack md:text-8xl">I Enjoy Books—Though I've Not Much Time To Read Them
+        <h1 transition:name="leade" transition:animate="fade" class="mt-2 text-6xl font-bold tracking-tight text-SignalBlack md:text-8xl">The Bookshelf
         </h1>
     </div>
-    
+
   </div>
 
 </MainLayout>
-
