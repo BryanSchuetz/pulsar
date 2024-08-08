@@ -1,21 +1,30 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import { formatPosts } from "@js/utils";
 import { getCollection } from 'astro:content';
-import {readableDate,relativeDate } from '@js/utils.js'
-import type { CollectionEntry } from "astro:content";
-const allPosts = await getCollection('books');
-const formattedPosts = formatPosts(allPosts);
-const recentPosts = formattedPosts.slice(0, 3);
-import { marked } from 'marked';
+const allBooks = await getCollection('books');
+const data = allBooks[0].data
 ---
+
 <MainLayout title="Bookshelf">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
         <h1 transition:name="leade" transition:animate="fade" class="mt-2 text-6xl font-bold tracking-tight text-SignalBlack md:text-8xl">The Bookshelf
         </h1>
     </div>
-
+    <!-- Looping through books -->
+    <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+  {data.map(book => (
+      <li class="relative">
+        <div class={book.link}>
+          <img src={book.image} alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+          <button type="button" class="absolute inset-0 focus:outline-none">
+            <span class="sr-only">{book.title}</span>
+          </button>
+        </div>
+        <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">{book.stars}</p>
+        <p class="pointer-events-none block text-sm font-medium text-gray-500">{book.description}</p>
+      </li>
+  ))}
+    </ul>
   </div>
-
 </MainLayout>
