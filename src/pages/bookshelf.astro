@@ -24,7 +24,7 @@ function renderStars(stars: number): string {
           <div class={book.link}>
             <div class="overflow-hidden aspect-h-1 aspect-w-1">
             <!-- @todo download the images to use in src and drop in the Astro image component here. Should I use Figure? -->
-              <img src={book.image} alt="Book Cover Art;" class="object-cover w-full h-full object-top" inferSize>
+              <img src={book.image} alt="Book Cover Art;" class="object-cover w-full h-full object-top">
             </div>
             <h2 class="mt-2 font-bold prose">{book.title}</h2>
           </div>
