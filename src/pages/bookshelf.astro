@@ -17,20 +17,23 @@ function renderStars(stars: number): string {
     </div>
     <!-- Looping through books -->
     <div class="mt-8">
-      <h2 class="text-lg mb-4 font-bold">2024</h2>
+      <h2 class="text-lg mb-4 font-bold">2024</h2> 
+      <p class="prose mb-8">What I've been reading this year. I'm typically a giant slacker when it comes to reading—spending too much time scrolling on crap and too little time reading things of real value. Part of the logic of seting up this page is to build some social obligation to read more. We'll see if that works, fingers crossed 🤞🏼.</p>
       <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
         {data.map(book => (
-        <li class="relative">
-          <div class={book.link}>
-            <div class="overflow-hidden aspect-h-1 aspect-w-1">
-            <!-- @todo download the images to use in src and drop in the Astro image component here. Should I use Figure? -->
-              <img src={book.image} alt="Book Cover Art;" class="object-cover w-full h-full object-top">
+        <a href={book.link} target="_blank">
+          <li class="relative">
+            <div class="">
+              <div class="overflow-hidden aspect-h-1 aspect-w-1">
+              <!-- @todo download the images to use in src and drop in the Astro image component here. Should I use Figure? -->
+                <img src={book.image} alt="Book Cover Art;" class="object-cover w-full h-full object-top">
+              </div>
+              <h2 class="mt-2 font-bold prose">{book.title}</h2>
             </div>
-            <h2 class="mt-2 font-bold prose">{book.title}</h2>
-          </div>
-          <p class="text-gray-900 prose">{renderStars(book.stars)}</p>
-          <p class="block text-sm font-medium text-gray-500 prose">{book.description}</p>
-        </li>
+            <p class="">{renderStars(book.stars)}</p>
+            <p class="block prose">{book.description}</p>
+          </li>
+        </a>
         ))}
       </ul>
     </div>

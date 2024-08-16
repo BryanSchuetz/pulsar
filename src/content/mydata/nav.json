@@ -18,5 +18,10 @@
     "name": "Uses",
     "href": "/uses",
     "icon": "PocketKnife"
+  },
+  {
+    "name": "Bookshelf",
+    "href": "/bookshelf",
+    "icon": "BookOpenText"
   }
 ]
