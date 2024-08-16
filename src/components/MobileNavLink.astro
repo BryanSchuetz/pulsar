@@ -1,13 +1,14 @@
 ---
 const { href, text, icon } = Astro.props
 
-import { PenSquare, GitBranchPlus, PocketKnife, Music4 } from 'lucide-astro'
+import { PenSquare, GitBranchPlus, PocketKnife, Music4, BookOpenText } from 'lucide-astro'
 
 const iconComponents: componentObject = {
   PenSquare,
   GitBranchPlus,
   PocketKnife,
-  Music4
+  Music4,
+  BookOpenText
 }
 const IconComponent = iconComponents[icon];
 
@@ -18,6 +19,7 @@ type componentObject = {
   GitBranchPlus: typeof GitBranchPlus
   PocketKnife: typeof PocketKnife
   Music4: typeof Music4
+  BookOpenText: typeof BookOpenText
 }
 ---
 
@@ -33,6 +35,8 @@ type componentObject = {
     menuToggle?.classList.toggle("active")
   }
   document.getElementById("Blog")?.addEventListener("click", handleClick)
+  document.getElementById("Bookshelf")?.addEventListener("click", handleClick)
+  document.getElementById("Uses")?.addEventListener("click", handleClick)
   document.getElementById("Music")?.addEventListener("click", handleClick)
   document.getElementById("menu-nishiki")?.addEventListener("click", handleClick)
 </script>
