@@ -1,14 +1,14 @@
 ---
 const { href, text, icon } = Astro.props
 
-import {PenSquare, GitBranchPlus, PocketKnife, Music4, BookOpenText } from 'lucide-astro'
+import {PenSquare, GitBranchPlus, PocketKnife, Music4, LibraryBig } from 'lucide-astro'
 
 const iconComponents: componentObject = {
   PenSquare,
   GitBranchPlus,
   PocketKnife,
   Music4,
-  BookOpenText
+  LibraryBig
 
 }
 const IconComponent = iconComponents[icon];
@@ -20,7 +20,7 @@ type componentObject = {
   GitBranchPlus: typeof GitBranchPlus,
   PocketKnife: typeof PocketKnife,
   Music4: typeof Music4,
-  BookOpenText: typeof BookOpenText
+  LibraryBig: typeof LibraryBig
 }
 
 ---
