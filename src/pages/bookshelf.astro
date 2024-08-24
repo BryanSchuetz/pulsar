@@ -7,10 +7,20 @@ function renderStars(stars: number): string {
   return '⭐ '.repeat(stars);
 }
 import { Image } from 'astro:assets'
+import SubprimeAttentionCrisis from '@images/bookshelf/subprime-attention-crisis.jpg'
+import NemesisGames from '@images/bookshelf/nemesis-games.jpg'
+import ChildrenOfTime from '@images/bookshelf/children-of-time.jpg'
+import ChildrenOfRuin from '@images/bookshelf/children-of-ruin.jpg'
+import UndauntedCourage from '@images/bookshelf/undaunted-courage.jpg'
 
+//map the imported images so that I can use them as the 'src' in the images when looping through the books
 
-function resolveImagePath(imagePath: string): string {
-  return imagePath;
+const bookCovers = {
+  "Subprime Attention Crisis": SubprimeAttentionCrisis,
+  "Nemesis Games": NemesisGames,
+  "Children of Time": ChildrenOfTime,
+  "Children of Ruin": ChildrenOfRuin,
+  "Undaunted Courage": UndauntedCourage
 }
 ---
 
@@ -32,12 +42,13 @@ function resolveImagePath(imagePath: string): string {
               <li class="relative">
                 <div class="">
                   <div class="overflow-hidden aspect-h-3 aspect-w-2">
-                    <Image width="100" height="100" src={resolveImagePath(book.image)} alt="Book Cover Art;" class="object-cover w-full h-full object-top">
+                    <Image width="1000" height="1000" src={bookCovers[book. title]
+                    } alt="Book Cover Art;" class="object-cover w-full h-full object-top" decoding="async" loading="lazy"densities={[1, 1.5, 2]}>
                   </div>
                   <h2 class="mt-2 font-bold prose">{book.title}</h2>
                 </div>
                 <p class="">{renderStars(book.stars)}</p>
-                <p class="block prose">{book.description}</p>
+                <p class="block prose text-sm">{book.description}</p>
               </li>
             </a>
             ))}
