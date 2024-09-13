@@ -12,16 +12,18 @@ import NemesisGames from '@images/bookshelf/nemesis-games.jpg'
 import ChildrenOfTime from '@images/bookshelf/children-of-time.jpg'
 import ChildrenOfRuin from '@images/bookshelf/children-of-ruin.jpg'
 import UndauntedCourage from '@images/bookshelf/undaunted-courage.jpg'
+import Technopoly from '@images/bookshelf/technopoly.jpg'
 
 //map the imported images so that I can use them as the 'src' in the images when looping through the books
-
 const bookCovers = {
   "Subprime Attention Crisis": SubprimeAttentionCrisis,
   "Nemesis Games": NemesisGames,
   "Children of Time": ChildrenOfTime,
   "Children of Ruin": ChildrenOfRuin,
-  "Undaunted Courage": UndauntedCourage
+  "Undaunted Courage": UndauntedCourage,
+  "Technopoly": Technopoly
 }
+
 ---
 
 <MainLayout title="Bookshelf">
@@ -39,11 +41,13 @@ const bookCovers = {
           <ul class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {data.map(book => (
             <a href={book.link} target="_blank">
-              <li class="relative">
+              <li class="relative p-4">
                 <div class="">
                   <div class="overflow-hidden aspect-h-3 aspect-w-2">
-                    <Image width="1000" height="1000" src={bookCovers[book. title]
-                    } alt="Book Cover Art;" class="object-cover w-full h-full object-top" decoding="async" loading="lazy"densities={[1, 1.5, 2]}>
+                    <Image src={bookCovers[book. title]
+                    } alt="Book Cover Art;" class="object-cover object-top" decoding="async" loading="lazy"
+                    widths={[400, 600, 800, 900]} sizes={'(max-width: 600px) 800px,  (max-width: 1023px) 900px, (min-width: 1300px), 800px'}
+                    />
                   </div>
                   <h2 class="mt-2 font-bold prose">{book.title}</h2>
                 </div>
