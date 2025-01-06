@@ -34,3 +34,15 @@
   image: '/src/images/bookshelf/technopoly.jpg'
   description: I went to school for history and philosophy, whith a Masters focused on the intersection of history, philosophy, and technology. I'm a sucker for anything about the history of science (James Burke, et al), and it's impact on our culture in particular. So this book is pretty much right in my wheelhouse. It was written in 92 but Neil does such a good job of laying out the fundamental concepts that it's as relevant today as it was then. Highly recommend.
   stars: 5
+- title: Babylon's Ashes
+  author: James S.A. Corey
+  link: https://app.thestorygraph.com/books/d97c5cfc-7e64-411b-84db-394b44ad1134
+  image: /src/images/bookshelf/babylons-ashes.jpg
+  description: The sixth book in the Expanse series, I wasn't a big fan of the previous installment (Nemesis Games)—but this one puts the series back on track for, me at least. The battle between the Free Navy and the consolidated fleet is in full swing, and the Rociante—with the crew finally back together—is there for it. 
+  stars: 4
+- title: Persepolis Rising
+  author: James S.A. Corey
+  link: https://app.thestorygraph.com/books/55976b7f-955e-4baf-8042-704b35303baf
+  image: /src/images/bookshelf/persepolis-rising.jpg
+  description: Laconia finally shows themselves—and then everything changes... again. Continuing my deep dive into the Expanse series, this one builds on the success of Baylons's Ashes and moves the big arc along at pace. For a while I was saving these up, deliberately slow-walking my way through the series—but this one left me unable to wait to see what happens next.
+  stars: 4
