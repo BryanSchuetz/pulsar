@@ -28,6 +28,7 @@ const books = defineCollection({
       image: z.string(),
       description: z.string(),
       stars: z.number(),
+      year: z.number()
     })),
 });
 const posts = defineCollection({

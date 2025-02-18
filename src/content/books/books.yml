@@ -4,45 +4,67 @@
   image: 'SubprimeAttentionCrisis'
   description: Examines the way big tech companies financialize attention in digital advertising, comparing its potential collapse to the housing crisis of 2008. Hwang argues that the true value of online attention is misrepresented, and if digital advertising collapses, the internet will be put at risk.
   stars: 3
+  year: 2024
 - title: Nemesis Games
   author: James S.A. Corey
   link: https://app.thestorygraph.com/books/fe448253-2e71-47cf-8a27-60af95cacb57
   image: '/src/images/bookshelf/nemesis-games.jpg'
   description: I've seen some people refer to this as The Empire Strikes Back of the Expanse series. Meh, maybe? I loved that movie though—while for me this was the weakest book in the series so far. The crew was mostly split up for the whole thing, and in terms of advancing the overall plot, not much really happeend.
   stars: 3
+  year: 2024
 - title: Children of Time
   author: Adrian Tchaikovsky
   link: https://app.thestorygraph.com/books/142bc3cb-3aac-49e5-8527-b3cc9675f158
   image: '/src/images/bookshelf/children-of-time.jpg'
   description: I first heard this series mentioned on the Ezra Klein Show, where it was discussed with the author for what insight it offers into the rise of Generative AI. While there are some parallels, the story stands on its own as just a really great piece of world building sci-fi. The story spans millennia, using cryo hibernation to center the narrative around a consistent core of human characters. When efforts to enginier new intelligent specicies on other worlds falls apart—things get even crazier from there. It's a fun read.
   stars: 4
+  year: 2024
 - title: Children of Ruin
   author: Adrian Tchaikovsky
   link: https://app.thestorygraph.com/books/b25151f4-7d2e-461c-9588-2900fad09c17
   image: '/src/images/bookshelf/children-of-ruin.jpg'
   description: The sequel to Children of Time, this book picks up where the last left off, well... a handfull of centuries later, but in the span of this series, that's really no time at all. This one didn't hold up as well for me as the last one did—less of a focus on humans maybe. Or at least the humans that don't live as an aftifical intelligence inside a biological computer made up of super-smart ants. Again though, a fun read.
   stars: 2
+  year: 2024
 - title: Undaunted Courage
   author: Stephen E. Ambrose
   link: https://app.thestorygraph.com/books/186e80b5-2077-44c1-829c-06dce1308544
   image: '/src/images/bookshelf/undaunted-courage.jpg'
   description: I've always been obsessed with the Lewis and Clark expedition. And this book really gets in the weeds of the Lewis journals and leaves no deatil unexamined. I like to have a non-fiction book going while I'm also reading a novel.
   stars: 4
+  year: 2024
 - title: Technopoly
   author: Neil Postman
   link: https://app.thestorygraph.com/books/e1aa910c-4223-495d-95b8-17f6d54f26ac
   image: '/src/images/bookshelf/technopoly.jpg'
   description: I went to school for history and philosophy, whith a Masters focused on the intersection of history, philosophy, and technology. I'm a sucker for anything about the history of science (James Burke, et al), and it's impact on our culture in particular. So this book is pretty much right in my wheelhouse. It was written in 92 but Neil does such a good job of laying out the fundamental concepts that it's as relevant today as it was then. Highly recommend.
   stars: 5
+  year: 2024
 - title: Babylon's Ashes
   author: James S.A. Corey
   link: https://app.thestorygraph.com/books/d97c5cfc-7e64-411b-84db-394b44ad1134
   image: /src/images/bookshelf/babylons-ashes.jpg
-  description: The sixth book in the Expanse series, I wasn't a big fan of the previous installment (Nemesis Games)—but this one puts the series back on track for, me at least. The battle between the Free Navy and the consolidated fleet is in full swing, and the Rociante—with the crew finally back together—is there for it. 
+  description: The sixth book in the Expanse series, I wasn't a big fan of the previous installment (Nemesis Games)—but this one puts the series back on track for, me at least. The battle between the Free Navy and the consolidated fleet is in full swing, and the Rociante—with the crew finally back together—is there for it.
   stars: 4
+  year: 2024
 - title: Persepolis Rising
   author: James S.A. Corey
   link: https://app.thestorygraph.com/books/55976b7f-955e-4baf-8042-704b35303baf
   image: /src/images/bookshelf/persepolis-rising.jpg
   description: Laconia finally shows themselves—and then everything changes again. Continuing my deep dive into the Expanse series, this one builds on the success of Baylons's Ashes and moves the big arc along at pace. For a while I was saving these up, deliberately slow-walking my way through the series—but this one left me unable to wait to see what happens next.
   stars: 4
+  year: 2024
+- title: Tiamat's Wrath
+  author: James S.A. Corey
+  link: https://app.thestorygraph.com/books/72cea338-a19c-4351-9737-03fad91d156d
+  image: '/src/images/bookshelf/tiamats-wrath.jpg'
+  description: I'm burning hard towards the end of this series and here at book eight I feel like the authors are tying up loose ends. That's not a bad thing necessarly, and it's done amidst plenty of fan service—as wars are won and lost, character arcs run their course, and whole plot branches get pruned away. At times this series can move at a bit slow, so this was a nice change of pace for me. I'll miss this series when it's over—though after tearing through the last three in a row, I'll probably take a break before reading the last one.
+  stars: 4
+  year: 2025
+- title: Met at Arms
+  author: Terry Pratchet
+  link: https://app.thestorygraph.com/books/2eb0d9fa-9169-42f0-a0c7-3adbd03657b9
+  image: '/src/images/bookshelf/men-at-arms.jpg'
+  description: Another great series I love, this is the 15th book in the overall Discworld collection of books—or the second book in the City Watch sub-series, depending on how you like to roll. I'm a sucker for any of these books that dig around in the culture of Ankh-Morpork (the city at the center of much of the action in the books)—and this one doesn't dissapoint. The Watch needs men, the city needs a king, and Captain Sam Vimes needs something to do. All of the Discworld books deliver, Pratchet is a one of a kind writer—come for the quick-witted lively action and stay for the non-stop puns.
+  stars: 3
+  year: 2025
