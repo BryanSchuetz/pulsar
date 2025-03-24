@@ -14,5 +14,10 @@ export default defineConfig({
       excludeLangs: ['mermaid', 'math']
     },
     rehypePlugins: [rehypeMermaid]
-  }
+  },
+  vite: {
+      optimizeDeps: {
+        include: ['mermaid']
+      }
+    }
   });
