@@ -1,0 +1,41 @@
+---
+title: |
+  Astro ❤️ Mermaid Charts
+tagline: |
+  Astro and Merimaid, sitting in a tree...
+pubDate: 2025-03-20 17:00:00 Z
+tags:
+  - Tooling
+  - Web Development
+category: web-development
+description: |
+  Hey, with Astro 5.5 it's now easier than ever to integrate Mermaid Charts into your site. Thanks to the new `excludeLangs` option in Markdown config. Now that I can easily add charts and diagrams into my posts—I'll be soo much more productive. What?
+config:
+  themeVariables:
+    maxWidth: 100
+---
+[Mermaid charts](https://mermaid.js.org/intro/) are rad. Now, with [Astro 5.5](https://astro.build/blog/astro-550/) it's easier than ever to integrate them into your site. Basically, the new `excludeLangs` option in Markdown config tells the compiler to ignore those code blocks. Then Rehype renders them to the page.
+
+```js astro.config
+markdown: {
+    syntaxHighlight: {
+      type: 'shiki',
+      excludeLangs: ['mermaid', 'math'],
+    },
+    rehypePlugins: [rehypeMermaid],
+}
+````
+Now that I can easily add charts and diagrams into my posts—I'll be soo much more productive. What?
+
+
+```mermaid
+  quadrantChart
+      title Effective Use of My Time
+      x-axis Little Practical Use --> Great Practical Use
+      y-axis Fun Distraction --> Boring Work
+      quadrant-1 Everything I Avoid
+      quadrant-2 Efff This Stuff
+      quadrant-3 Where I live
+      quadrant-4 So Empty
+      Integrate Mermaid Charts: [0.16, 0.3 ]
+```

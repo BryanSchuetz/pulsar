@@ -23,3 +23,6 @@ body .prose a{
 pre{
   white-space: pre-wrap;
 }
+[aria-roledescription="quadrantChart"] {
+    max-width: 100% !important;
+}

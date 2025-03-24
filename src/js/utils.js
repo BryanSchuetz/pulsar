@@ -41,7 +41,7 @@ export function relativeDate(date) {
 
 
 // Generate limited html excerpt from a markdown file
-import marked from 'marked'
+import { marked } from 'marked'
 const excerptLength = 250
 // Function to truncate markdown and convert to HTML
 export function createExcerpt(postBody) {
