@@ -16,8 +16,6 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^5.5.4",
-    "astro-devtool-breakpoints": "^0.1.1",
-    "astro-meta-tags": "^0.2.1",
     "lucide-astro": "^0.323.0",
     "luxon": "^3.4.3",
     "marked": "^9.0.3",
