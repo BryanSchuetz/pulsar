@@ -24,11 +24,6 @@ export default defineConfig({
   vite: {
       ssr: {
         noExternal: ['mermaid']
-      },
-      build: {
-        rollupOptions: {
-          external: ['mermaid-isomorphic']
-        }
       }
     }
   });
