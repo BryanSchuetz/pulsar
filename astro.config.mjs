@@ -6,23 +6,29 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://distresssignal.org',
   output: 'static',
+  site: 'https://distresssignal.org',
   integrations: [tailwind(), mdx()],
   markdown: {
     syntaxHighlight: {
       type: 'shiki',
       excludeLangs: ['mermaid', 'math']
     },
-    rehypePlugins: [rehypeMermaid]
+    rehypePlugins: [
+      [rehypeMermaid,{
+      mermaidConfig: {
+        startOnLoad: false
+      }
+    }]]
   },
   vite: {
-      optimizeDeps: {
-        include: ['mermaid'],
-        exclude: ['mermaid-isomorphic']
-      },
       ssr: {
-        noExternal: ['mermaid-isomorphic']
+        noExternal: ['mermaid']
+      },
+      build: {
+        rollupOptions: {
+          external: ['mermaid-isomorphic']
+        }
       }
     }
   });
