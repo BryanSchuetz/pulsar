@@ -19,6 +19,9 @@ export default defineConfig({
   vite: {
       optimizeDeps: {
         include: ['mermaid']
+      },
+      ssr: {
+        noExternal: ['mermaid-isomorphic']
       }
     }
   });
