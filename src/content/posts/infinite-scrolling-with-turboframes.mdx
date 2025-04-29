@@ -15,7 +15,11 @@ OK, real quick—this is a pattern I often use for pagination on a site. The bit
 
 ## BaSIcaLLy...
 
-I'm nesting [TurboFrames](https://turbo.hotwired.dev/handbook/frames) on each page, which include the current set of items as well as a link to the next page in a `moarrr posts` link. You could just request the next page when the users scrolls to the bottom of the current set (infinite scroll)—but don't do that. [Turbo](https://turbo.hotwired.dev/) handles the rest, extracting the next set of items+moarrr link from the requested page and placing all of that into the frame of the current page (without reloading the page, changing the scroll position, updating the URL, etc.). It's essentially an infinite scroll, but with a button so the user remains in control and a NoJS fallback.
+I'm nesting [TurboFrames](https://turbo.hotwired.dev/handbook/frames) on each page. The first frame contains the current set of items. The second, nested frame, contains a `moarrr posts` link to the next page. You could just request the next page when the user scrolls to the bottom of the current set (infinite scroll)—but don't do that.
+
+> Nothing has contributed more to our current American psychosis than infinite scroll and vertical video—let's break the cycle.
+
+[Turbo](https://turbo.hotwired.dev/) handles the rest, extracting the next set of items+moarrr link from the requested page and placing all of that into the target frame of the current page (without reloading the page, changing the scroll position, or updating the URL). It's essentially an infinite scroll—but with a button so the user remains in control, and a NoJS fallback.
 
 ```liquid
     ---
