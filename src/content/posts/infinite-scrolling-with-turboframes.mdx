@@ -1,0 +1,54 @@
+---
+title: |
+  Infinite Scrolling with Turbo and Frames
+tagline: |
+  A kinder, gentler, firehose of all the crap.
+pubDate: 2025-04-28 17:00:00 Z
+tags:
+  - Tooling
+  - Web Development
+category: web-development
+description: |
+    Infinite scrolling is a dark pattern, and traditional pagination controls are anachronistic on a modern web page. There is a better way. An infinite scroll (with user controlls) and a sensible NoJS fallback. The venerable [Turbo](https://turbo.hotwired.dev/) library makes this kind of thing super easy to implement in any framework. It has been my go-to pattern for pagination for a while now.
+---
+OK, real quick—this is a pattern I often use for pagination on a site. The bit below is from an [Eleventy](https://www.11ty.dev/) site, but I've done the same thing in [Astro](https://astro.build/), and [Jekyll](https://jekyllrb.com/). It's easy to implement, feels modern on the page, and brings sensible fallbacks along for the ride.
+
+## BaSIcaLLy...
+
+I'm nesting [TurboFrames](https://turbo.hotwired.dev/handbook/frames) on each page, which include the current set of items as well as a link to the next page in a `moarrr posts` link. You could just request the next page when the users scrolls to the bottom of the current set (infinite scroll)—but don't do that. [Turbo](https://turbo.hotwired.dev/) handles the rest, extracting the next set of items+moarrr link from the requested page and placing all of that into the frame of the current page (without reloading the page, changing the scroll position, updating the URL, etc.). It's essentially an infinite scroll, but with a button so the user remains in control and a NoJS fallback.
+
+```liquid
+    ---
+    title: The Blog
+    layout: default
+    pagination:
+    data: collections.post
+    size: 10
+    alias: posts
+    reverse: true
+    ---
+    <section>
+    <div>
+        <div>
+        <turbo-frame id="posts-{{pagination.pageNumber}}">
+            <ul class="list-none">
+            {%- for item in posts -%}
+            {% include 'components/post-teaser.njk' %}
+            {%- endfor -%}
+            </ul>
+            {% if pagination.nextPageHref %}
+            <turbo-frame id="posts-{{pagination.pageNumber + 1}}">
+                <a target="posts-{{pagination.pageNumber + 1}}" href="{{ pagination.nextPageHref | url }}">MOOOARR POSTS</a>
+            </turbo-frame>
+            {% endif %}
+        </turbo-frame>
+        </div>
+    </div>
+    </section>
+```
+
+## But Why?
+
+Pagination on the web is as certain as death or taxes—and equally as charming. OK, I'm not really being fair. Traditional pagination controls are straight forward, easy to understand, and they do their job. They are an admirable solution to a classic and persistent challenge of the web—how do you sensibly show someone _all the crap_. To me though, they seem quite anachronistic on a modern web page. In my mind they're situated right between the `<marquee>` and `<blink>` tags—they belong to an earlier era of the web, best left in the past.
+
+When AJAX became popular people went all in on infinite scroll (no pagination controls, just load moar crap as the user scrolls). It was the right idea I think, scrolling is pretty clear user intent—but it became a dark pattern, weaponized on social media sites. I think the above pattern strikes a nice modern ballance—with a reasonable fallback for when JS isn't available.

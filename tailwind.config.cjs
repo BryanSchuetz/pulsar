@@ -13,6 +13,14 @@ module.exports = {
         'SignalPink': '#c13f8e',
         'SignalBlack': '#282A36',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'code::before': { content: '"["' },
+            'code::after': { content: '"]"' },
+          },
+        },
+      },
     },
 	},
 	plugins: [
