@@ -1,0 +1,46 @@
+---
+title: |
+  Going Subtle With Zed Predictions
+tagline: |
+  How to keep the slop on the down low...
+pubDate: 2025-05-05 17:00:00 Z
+tags:
+  - Tooling
+  - Web Development
+category: web-development
+description:  People love to hate on generative AI, especially when it shows up where it wasn't before. Something like 60% of global venture capital is invested in AI—yes, AI Enshitification is real. So there's a lot of smoke there, but there's some fire. People who use text editors for writing code are right in the middle of that fire. This is fine.
+---
+
+People love to hate on generative AI, especially when it shows up where it wasn't before. Something like 60% of global venture capital is invested in AI—yes, AI Enshitification is real. So there's a lot of smoke there, but there's some fire. People who use text editors for writing code are right in the middle of that fire. This is fine.
+
+When Zed first annonced their 'open source' edit predictions—they call it '[Zeta](https://zed.dev/blog/edit-prediction)'—I was cautiously optimistic. I don't suffer from the AI Derrangement Syndrome a lot of my colleageus are aflicted with.
+
+- I used Emmet abbreviations to expand monotonous HTML boilerplate back when I was using TextMate
+- I had my own hand-rolled library of 'code-completion ready' snippets back when I was using Sublime Text
+- I used language server supplied code-completions (Intellisense®) back when I was using VSCode
+- I used Copilot when it first came out—it got better
+- These edit predictions in Zed are just the natural evolution of this same pattern that's been around for a long while already
+
+The truth is, when I switched to Zed I'd entirely gotten out of the habit of using generative AI inline. Not to go too far in the weeds, but I've got Zed's Assistant Panel docked to the right—so jumping (`HYPR+N`) there and relying on [slash commands](https://zed.dev/docs/assistant/commands) is the way. ReAl QUicK: slash commands let you do things like `/tab` to add the active tab as context, or `/diagnostics` to add current errors reported by the language server as context, or `/fetch` to grab documentation to use as context, you get the idea. It's pretty nice, I use one of the Claude's over there, FWIW.
+
+Back to the point: I like to try new things, so here I am giving Zeta a shot. One of the first things I appreciate about it is that you can set it to work in 'subtle' mode.
+
+```json
+  "edit_predictions": {
+    "mode": "subtle"
+  }
+```
+
+This hides the prediction under a modifier key (`Option`), so you have to ask for it. This is great for a number of reasons:
+
+1. You're not actively training yourself to entirely ignore the suggestions by having them constantly shoved in your face when you don't want them
+2. You can see when a suggestion is available, and preview it in a keystroke
+3. You don't have to suffer through having this little pop-up window constantly covering up the blocks of code you're working on
+
+While I'm at it, I also hide the LSP completions: `"show_completions_on_input": false` and bind  `editor::ShowCompletions` to `HYPR+Z`. Ideally, I could have them both (LSP Completions + Zeta) under the same keybinding—but I don't think that's possible at the moment.
+
+![Subtle Mode](/images/zed-predictions.png)
+
+Pretty subtle, all told. It get's a bit annoying when doing things like adding Tailwind classes where I really rely on the LSP to remind me of the right class names. What I really want is a binding to toggle `show_completions_on_input` on and off from the editor—but I don't think that's possible at the moment. Or better yet, just let Zeta handle the suggestions from the LSP, I'm sure we'll get there.
+
+We'll see how it goes.
