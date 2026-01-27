@@ -18,6 +18,7 @@ import PersepolisRising from '@images/bookshelf/persepolis-rising.jpg'
 import TiamatsWrath from '@images/bookshelf/tiamats-wrath.jpg'
 import MenAtArms from '@images/bookshelf/men-at-arms.jpg'
 import Matter from '@images/bookshelf/matter.jpeg'
+import HydrogenSonata from '@images/bookshelf/hydrogen-sonata.png'
 
 //map the imported images so that I can use them as the 'src' in the images when looping through the books
 const bookCovers = {
@@ -31,7 +32,8 @@ const bookCovers = {
   "Persepolis Rising": PersepolisRising,
   "Tiamat's Wrath": TiamatsWrath,
   "Met at Arms": MenAtArms,
-  "Matter": Matter
+  "Matter": Matter,
+  "Hydrogen Sonata": HydrogenSonata
 }
 
 ---
@@ -43,6 +45,32 @@ const bookCovers = {
         <p class="text-2xl md:text-3xl font-semibold leading-7 text-SignalPurp">The</p>
         <h1 transition:name="leade" transition:animate="fade" class="mt-2 text-6xl font-bold tracking-tight text-SignalBlack md:text-8xl"> Bookshelf</h1>
         <p class="mt-6 text-lg leading-8 text-SignalBlack">What I've been reading this year. I'm typically a giant slacker when it comes to reading—spending too much time scrolling on crap and too little time reading things of real value. Part of the logic of seting up this page is to build some social obligation to read more. We'll see if that works, fingers crossed 🤞🏼.</p>
+      </div>
+      <!-- Looping through books -->
+      <!-- 2026 BOOKS -->
+      <div class="bg-white py-14">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <p class="text-2xl max-w-2xl mx-auto lg:max-w-none md:text-3xl font-semibold leading-7 text-SignalPurp text-right">2026</p>
+          <ul class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {data.filter(book => book.year === 2026).map(book => (
+            <a href={book.link} target="_blank">
+              <li class="relative p-4">
+                <div class="">
+                  <div class="overflow-hidden aspect-h-3 aspect-w-2">
+                    <Image src={bookCovers[book. title]
+                    } alt="Book Cover Art;" class="object-cover object-top" decoding="async" loading="lazy"
+                    widths={[400, 600, 800, 900]} sizes={'(max-width: 600px) 800px,  (max-width: 1023px) 900px, (min-width: 1300px), 800px'}
+                    />
+                  </div>
+                  <h2 class="mt-2 font-bold prose">{book.title}</h2>
+                </div>
+                <p class="">{renderStars(book.stars)}</p>
+                <p class="block prose text-sm">{book.description}</p>
+              </li>
+            </a>
+            ))}
+            </ul>
+        </div>
       </div>
       <!-- Looping through books -->
       <!-- 2025 BOOKS -->

@@ -1,10 +1,10 @@
 ---
 const { title, tagline, description } = Astro.props;
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import '../global.css';
 ---
 <head>
-  <ViewTransitions />
+    <ClientRouter fallback="animate"/>
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="RSS Feed">
