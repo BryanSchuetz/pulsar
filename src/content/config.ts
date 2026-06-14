@@ -17,6 +17,13 @@ const music = defineCollection({
       artist: z.string(),
       link: z.string(),
       image: z.string(),
+      lastPlayed: z.string().optional(),
+      recentTrackCount: z.number().optional(),
+      totalPlayCount: z.number().optional(),
+      latestTrack: z.string().optional(),
+      score: z.number().optional(),
+      itunesCollectionId: z.string().optional(),
+      releaseDate: z.string().optional(),
     })),
 });
 const books = defineCollection({
