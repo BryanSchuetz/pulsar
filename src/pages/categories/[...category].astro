@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 }
 const { category } = Astro.params;
 const allPosts = await getCollection('posts',({ data }) => {
-  return data.category == category;
+  return data.category == category && !data.draft;
 });
 const formattedPosts = formatPosts(allPosts);
 import { marked } from 'marked';
