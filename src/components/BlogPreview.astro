@@ -9,19 +9,19 @@ const recentPosts = formattedPosts.slice(0, 3);
 import { marked } from 'marked';
 ---
 
-<div class="bg-white py-14">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <p class="text-2xl max-w-2xl mx-auto lg:max-w-none md:text-3xl font-semibold leading-7 text-SignalPurp text-right">Jibber Jabber</p>
-    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+<div class="bg-white py-8 sm:py-12 lg:py-14">
+  <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+    <p class="mx-auto max-w-2xl text-right text-xl font-semibold leading-7 text-SignalPurp sm:text-2xl md:text-3xl lg:max-w-none">Jibber Jabber</p>
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 border-t border-gray-200 pt-6 sm:gap-y-14 sm:pt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {recentPosts.map((post: CollectionEntry<"posts">) =>(
         <article class="flex max-w-xl flex-col items-start justify-start">
         <div class="relative">
-          <h2 class="my-3 text-2xl font-semibold leading-6 text-gray-900 group-hover:text-gray-600"><a class="plain" href={`/${post.slug}`}>{post.data.title}</a></h2>
-            <div class="mt-5 text-gray-600 prose">
+          <h2 class="my-3 text-2xl font-semibold leading-7 text-gray-900 group-hover:text-gray-600 sm:leading-6"><a class="plain" href={`/${post.slug}`}>{post.data.title}</a></h2>
+            <div class="mt-4 text-base leading-7 text-gray-600 prose sm:mt-5">
               <Fragment set:html={marked.parse(post.data.description || '')} />
             </div>
         </div>
-        <div class="flex items-center gap-x-4 text-xs">
+        <div class="mt-2 flex items-center gap-x-4 text-sm sm:text-xs">
           <time datetime="" class="text-gray-500">{relativeDate(post.data.pubDate)}</time>
           <a href={`/categories/${post.data.category}`} class="plain relative font-medium text-SignalRed">{post.data.category}</a>
         </div>
