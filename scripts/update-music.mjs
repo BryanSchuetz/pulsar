@@ -7,7 +7,7 @@ const getArgValue = (name, fallback) => {
   return match ? match.slice(prefix.length) : fallback;
 };
 
-const days = Number(getArgValue('--days', '90'));
+const days = Number(getArgValue('--days', '14'));
 const limit = Number(getArgValue('--limit', '12'));
 const outputPath = getArgValue('--output', 'src/content/music/recent-albums.json');
 const candidateLimit = limit * 4;
@@ -107,12 +107,14 @@ function groupAlbums(tracks) {
         recentTrackCount: 1,
         totalPlayCount: track.playCount,
         latestTrack: track.track,
+        playedAt: [track.playedAt],
       });
       continue;
     }
 
     existing.recentTrackCount += 1;
     existing.totalPlayCount += track.playCount;
+    existing.playedAt.push(track.playedAt);
 
     if (track.playedAt > existing.lastPlayed) {
       existing.lastPlayed = track.playedAt;
@@ -122,15 +124,24 @@ function groupAlbums(tracks) {
 
   return Array.from(albumsByKey.values())
     .map((album) => {
-      const daysSincePlayed = Math.max(
-        0,
-        (now - new Date(album.lastPlayed).getTime()) / (24 * 60 * 60 * 1000),
-      );
-      const recencyBonus = Math.max(0, days - daysSincePlayed);
+      const weightedRecentTrackCount = album.playedAt.reduce((total, playedAt) => {
+        const daysSincePlayed = Math.max(
+          0,
+          (now - new Date(playedAt).getTime()) / (24 * 60 * 60 * 1000),
+        );
+
+        return total + Math.max(0, 1 - daysSincePlayed / days);
+      }, 0);
 
       return {
-        ...album,
-        score: Math.round((album.recentTrackCount * 10 + recencyBonus) * 100) / 100,
+        album: album.album,
+        artist: album.artist,
+        lastPlayed: album.lastPlayed,
+        recentTrackCount: album.recentTrackCount,
+        totalPlayCount: album.totalPlayCount,
+        latestTrack: album.latestTrack,
+        weightedRecentTrackCount: Math.round(weightedRecentTrackCount * 100) / 100,
+        score: Math.round(weightedRecentTrackCount * album.recentTrackCount * 100) / 100,
       };
     })
     .sort((a, b) => b.score - a.score || b.lastPlayed.localeCompare(a.lastPlayed))

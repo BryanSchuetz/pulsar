@@ -21,6 +21,7 @@ const music = defineCollection({
       recentTrackCount: z.number().optional(),
       totalPlayCount: z.number().optional(),
       latestTrack: z.string().optional(),
+      weightedRecentTrackCount: z.number().optional(),
       score: z.number().optional(),
       itunesCollectionId: z.string().optional(),
       releaseDate: z.string().optional(),
