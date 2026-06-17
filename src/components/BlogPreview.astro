@@ -17,11 +17,11 @@ import { marked } from 'marked';
         <article class="flex max-w-xl flex-col items-start justify-start">
         <div class="relative">
           <h2 class="my-3 text-2xl font-semibold leading-7 text-gray-900 group-hover:text-gray-600 sm:leading-6"><a class="plain" href={`/${post.slug}`}>{post.data.title}</a></h2>
-            <div class="mt-4 text-base leading-7 text-gray-600 prose sm:mt-5">
+            <div class="mt-5 text-gray-600 prose prose-lg">
               <Fragment set:html={marked.parse(post.data.description || '')} />
             </div>
         </div>
-        <div class="mt-2 flex items-center gap-x-4 text-sm sm:text-xs">
+        <div class="mt-2 flex items-center gap-x-4 text-base sm:text-xs">
           <time datetime="" class="text-gray-500">{relativeDate(post.data.pubDate)}</time>
           <a href={`/categories/${post.data.category}`} class="plain relative font-medium text-SignalRed">{post.data.category}</a>
         </div>
