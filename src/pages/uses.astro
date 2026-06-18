@@ -1,46 +1,101 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const hardware = [
+  {
+    name: "Macbook",
+    note: "The last generation of the ill fated touch-bar Macbook Pros.",
+  },
+  {
+    name: "Omnitype Bauer Lite",
+    note: `I've got some <a href="/keyboards">thoughts</a> on keyboards. In this particular case—ghost top, 1st edition bottom, brass plate, OG Marshmallow switches (filmed/lubed). It's so choice. If you have the means, I highly reccomend you pick one up.`,
+  },
+  {
+    name: "LG Ultrafine",
+    note: "Single monitor gang, rise up. A crappy monitor, but a great panel at a ( non-ridiculous) price point.",
+  },
+];
+
+const software = [
+  {
+    name: "QMK",
+    note: "If you're not writing your own firmware for your keyboards—you're doing it wrong.",
+  },
+  {
+    name: "VSCode",
+    note: "The worst editor, except for all the others.",
+  },
+  {
+    name: "iTerm2",
+    note: "Hotkey visor mode—runing with TMUX.",
+  },
+  {
+    name: "Arc Browser",
+    note: "It's not called The Rendering Engine Company of New York for a reason.",
+  },
+  {
+    name: "Raycast",
+    note: "I was a huge Quicksilver user backin the day, then Launchbar, AlfredApp, and now Raycast. It doesn't suck.",
+  },
+  {
+    name: "Things",
+    note: "No one does it like Cultured Code.",
+  },
+  {
+    name: "ZSH",
+    note: "Autosuggestions, Jump, FZF, Copilot CLI, Abbreviations, Starship prompt. Gets the job done.",
+  },
+  {
+    name: "Astro",
+    note: "Been building static since before there was CSS. They do soo much right.",
+  },
+];
+
+const services = ["Netlify", "Vercel", "Github", "Cloudflre"];
 ---
 <MainLayout title="Uses">
   <div class="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
     <div class="mx-auto max-w-2xl lg:mx-0">
-        <h1 transition:name="leade" transition:animate="fade" class="mt-2 text-5xl font-bold leading-none tracking-tight text-SignalBlack sm:text-6xl md:text-8xl">Some Crap That I Use Most Days
-        </h1>
+      <h1 transition:name="leade" transition:animate="fade" class="mt-2 text-5xl font-bold leading-none tracking-tight text-SignalBlack sm:text-6xl md:text-8xl">Some Crap That I Use Most Days</h1>
     </div>
-    <div class="bg-white py-8 sm:py-12 lg:px-8 lg:py-16">
-      <div class="mx-auto max-w-[42rem] text-lg leading-8 text-gray-700">
-        <!-- <h1 class="mt-2 text-3xl font-bold tracking-tight text-SignalBlack sm:text-4xl">{entry.data.title}</h1>
-        <p class="text-base font-semibold leading-7 text-SignalOrange">{entry.data.category} | <time datetime="2020-03-16" class="text-gray-500">{relativeDate(entry.data.pubDate)}</time></p> -->
-        <div class="mt-8 max-w-2xl prose prose-lg text-SignalBlack sm:mt-10">
-          <p>That thing people do where they list out all the crap that they use to do their jobs and live their lives on a day-to-day basis—so other people can obesess about it as a way to avoid doing what they need to do in their jobs and their lives on a day-to-day basis.</p>
-            <p>Also listed on <a href="https://uses.tech">uses.tech</a>.</p>
-            <h2>Office/Hardware/Gear</h2>
-            <ul>
-              <li><strong>Macbook</strong>: The last generation of the ill fated touch-bar Macbook Pros.</li>
-              <li><strong>Omnitype Bauer Lite</strong>: I've got some <a href="/keyboards">thoughts</a> on keyboards. In this particular case—ghost top, 1st edition bottom, brass plate, OG Marshmallow switches (filmed/lubed). It's so choice. If you have the means, I highly reccomend you pick one up.</li>
-              <li><strong>LG Ultrafine</strong>: Single monitor gang, rise up. A crappy monitor, but a great panel at a ( non-ridiculous) price point.</li>
-            </ul>
-            <h2>Software/Libraries/Frameworks</h2>
-            <ul>
-              <li><strong>QMK</strong>: If you're not writing your own firmware for your keyboards—you're doing it wrong.</li>
-              <li><strong>VSCode</strong>: The worst editor, except for all the others.</li>
-              <li><strong>iTerm2</strong>: Hotkey visor mode—runing with TMUX.</li>
-              <li><strong>Arc Browser</strong>: It's not called The Rendering Engine Company of New York for a reason.</li>
-              <li><strong>Raycast</strong>: I was a huge Quicksilver user backin the day, then Launchbar, AlfredApp, and now Raycast. It doesn't suck.</li>
-              <li><strong>Things</strong>: No one does it like Cultured Code.</li>
-              <li><strong>ZSH</strong>: Autosuggestions, Jump, FZF, Copilot CLI, Abbreviations, Starship prompt. Gets the job done.</li>
-              <li><strong>Astro</strong>: Been building static since before there was CSS. They do soo much right.</li>
-            </ul>
-            <h2>Services/Subscriptions</h2>
-            <ul>
-              <li>Netlify</li>
-              <li>Vercel</li>
-              <li>Github</li>
-              <li>Cloudflre</li>
-            </ul>
-        </div>
+    <div class="bg-white py-8 sm:py-12 lg:py-16">
+      <div class="max-w-[42rem] text-lg leading-8 text-gray-700">
+        <p class="mb-4">That thing people do where they list out all the crap that they use to do their jobs and live their lives on a day-to-day basis—so other people can obesess about it as a way to avoid doing what they need to do in their jobs and their lives on a day-to-day basis.</p>
+        <p class="mb-10">Also listed on <a href="https://uses.tech" class="text-SignalOrange underline decoration-1 underline-offset-2">uses.tech</a>.</p>
       </div>
+
+      <!-- Hardware -->
+      <h2 class="mb-6 text-2xl font-bold text-SignalBlack">Office / Hardware / Gear</h2>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+        {hardware.map((item) => (
+          <div class="rounded-lg border border-gray-200 p-5">
+            <h3 class="text-lg font-semibold text-SignalBlack">{item.name}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-gray-600" set:html={item.note}></p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Software -->
+      <h2 class="mb-6 mt-12 text-2xl font-bold text-SignalBlack">Software / Libraries / Frameworks</h2>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+        {software.map((item) => (
+          <div class="rounded-lg border border-gray-200 p-5">
+            <h3 class="text-lg font-semibold text-SignalBlack">{item.name}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-gray-600" set:html={item.note}></p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Services -->
+      <h2 class="mb-6 mt-12 text-2xl font-bold text-SignalBlack">Services / Subscriptions</h2>
+      <div class="flex flex-wrap gap-3">
+        {services.map((item) => (
+          <span class="rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700">
+            {item}
+          </span>
+        ))}
+      </div>
+
     </div>
   </div>
-
 </MainLayout>
