@@ -9,6 +9,8 @@ const getArgValue = (name, fallback) => {
 
 const days = Number(getArgValue('--days', '14'));
 const limit = Number(getArgValue('--limit', '12'));
+const maxPerArtist = Number(getArgValue('--max-per-artist', '2'));
+const rotationPlaylist = getArgValue('--rotation-playlist', 'Heavy Rotation');
 const outputPath = getArgValue('--output', 'src/content/music/recent-albums.json');
 const candidateLimit = limit * 4;
 
@@ -18,6 +20,10 @@ if (!Number.isFinite(days) || days <= 0) {
 
 if (!Number.isFinite(limit) || limit <= 0) {
   throw new Error('Expected --limit to be a positive number.');
+}
+
+if (!Number.isFinite(maxPerArtist) || maxPerArtist <= 0) {
+  throw new Error('Expected --max-per-artist to be a positive number.');
 }
 
 const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
@@ -41,10 +47,20 @@ function readNumber(value) {
 
 function run(argv) {
   const cutoff = Number(argv[0]);
+  const rotationPlaylistName = argv[1];
   const Music = Application('Music');
   const library = Music.libraryPlaylists[0];
+  const rotationTracks = Music.playlists.byName(rotationPlaylistName).tracks();
+  const rotationTrackRanks = {};
+
+  for (let index = 0; index < rotationTracks.length; index += 1) {
+    const persistentId = readString(rotationTracks[index].persistentID);
+    if (persistentId) rotationTrackRanks[persistentId] = index + 1;
+  }
+
   const tracks = library.tracks.whose({ playedDate: { _greaterThan: new Date(cutoff) } })();
   const recentTracks = [];
+  const recentTrackIds = {};
 
   for (let index = 0; index < tracks.length; index += 1) {
     const track = tracks[index];
@@ -68,12 +84,37 @@ function run(argv) {
 
     if (!album || !artist) continue;
 
+    const persistentId = readString(track.persistentID);
+    if (persistentId) recentTrackIds[persistentId] = true;
+
     recentTracks.push({
       album,
       artist,
       track: readString(track.name).trim(),
       playedAt: new Date(playedAt).toISOString(),
       playCount: readNumber(track.playedCount),
+      rotationRank: rotationTrackRanks[persistentId] || 0,
+    });
+  }
+
+  for (let index = 0; index < rotationTracks.length; index += 1) {
+    const track = rotationTracks[index];
+    const persistentId = readString(track.persistentID);
+    if (persistentId && recentTrackIds[persistentId]) continue;
+
+    const album = readString(track.album).trim();
+    const trackArtist = readString(track.artist).trim();
+    const albumArtist = readString(track.albumArtist).trim();
+    const artist = albumArtist || trackArtist;
+    if (!album || !artist) continue;
+
+    recentTracks.push({
+      album,
+      artist,
+      track: readString(track.name).trim(),
+      playedAt: '',
+      playCount: readNumber(track.playedCount),
+      rotationRank: index + 1,
     });
   }
 
@@ -84,7 +125,7 @@ function run(argv) {
 function getRecentlyPlayedTracks() {
   const rawOutput = execFileSync(
     'osascript',
-    ['-l', 'JavaScript', '-e', jxaScript, String(cutoff)],
+    ['-l', 'JavaScript', '-e', jxaScript, String(cutoff), rotationPlaylist],
     { encoding: 'utf8', maxBuffer: 1024 * 1024 * 20 },
   );
 
@@ -104,25 +145,31 @@ function groupAlbums(tracks) {
         album: track.album,
         artist: track.artist,
         lastPlayed: track.playedAt,
-        recentTrackCount: 1,
+        recentTrackCount: track.playedAt ? 1 : 0,
         totalPlayCount: track.playCount,
         latestTrack: track.track,
-        playedAt: [track.playedAt],
+        playedAt: track.playedAt ? [track.playedAt] : [],
+        rotationTrackCount: track.rotationRank ? 1 : 0,
+        rotationRank: track.rotationRank || Infinity,
       });
       continue;
     }
 
-    existing.recentTrackCount += 1;
+    if (track.playedAt) existing.recentTrackCount += 1;
     existing.totalPlayCount += track.playCount;
-    existing.playedAt.push(track.playedAt);
+    if (track.playedAt) existing.playedAt.push(track.playedAt);
+    if (track.rotationRank) {
+      existing.rotationTrackCount += 1;
+      existing.rotationRank = Math.min(existing.rotationRank, track.rotationRank);
+    }
 
-    if (track.playedAt > existing.lastPlayed) {
+    if (track.playedAt && track.playedAt > existing.lastPlayed) {
       existing.lastPlayed = track.playedAt;
       existing.latestTrack = track.track;
     }
   }
 
-  return Array.from(albumsByKey.values())
+  const rankedAlbums = Array.from(albumsByKey.values())
     .map((album) => {
       const weightedRecentTrackCount = album.playedAt.reduce((total, playedAt) => {
         const daysSincePlayed = Math.max(
@@ -141,10 +188,33 @@ function groupAlbums(tracks) {
         totalPlayCount: album.totalPlayCount,
         latestTrack: album.latestTrack,
         weightedRecentTrackCount: Math.round(weightedRecentTrackCount * 100) / 100,
-        score: Math.round(weightedRecentTrackCount * album.recentTrackCount * 100) / 100,
+        rotationTrackCount: album.rotationTrackCount,
+        rotationRank: Number.isFinite(album.rotationRank) ? album.rotationRank : undefined,
+        score: Math.round(weightedRecentTrackCount * 100) / 100,
       };
     })
-    .sort((a, b) => b.score - a.score || b.lastPlayed.localeCompare(a.lastPlayed))
+    .sort((a, b) => {
+      const rotationDifference = Number(b.rotationTrackCount > 0) - Number(a.rotationTrackCount > 0);
+      if (rotationDifference) return rotationDifference;
+
+      if (a.rotationTrackCount && b.rotationTrackCount) {
+        return b.rotationTrackCount - a.rotationTrackCount
+          || a.rotationRank - b.rotationRank;
+      }
+
+      return b.score - a.score || b.lastPlayed.localeCompare(a.lastPlayed);
+    });
+
+  const artistCounts = new Map();
+
+  return rankedAlbums
+    .filter((album) => {
+      const artist = album.artist.toLocaleLowerCase();
+      const count = artistCounts.get(artist) ?? 0;
+      if (count >= maxPerArtist) return false;
+      artistCounts.set(artist, count + 1);
+      return true;
+    })
     .slice(0, candidateLimit);
 }
 
@@ -201,5 +271,5 @@ const enrichedAlbums = (await Promise.all(albums.map(searchItunes)))
 
 writeFileSync(`${process.cwd()}/${outputPath}`, `${JSON.stringify(enrichedAlbums, null, 2)}\n`);
 
-console.log(`Found ${tracks.length} recently played tracks from the last ${days} days.`);
+console.log(`Found ${tracks.length} recent and ${rotationPlaylist} candidate tracks.`);
 console.log(`Wrote ${enrichedAlbums.length} albums to ${outputPath}.`);
