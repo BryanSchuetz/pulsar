@@ -9,7 +9,7 @@ const albums = music?.data?.slice(0, 8) ?? [];
     <p class="mx-auto max-w-2xl text-left text-xl font-semibold leading-7 text-SignalPurp sm:text-2xl md:text-3xl lg:max-w-none">Tunes</p>
     <div class="mx-auto grid max-w-2xl border-t border-gray-200 pt-4 lg:mx-0 lg:max-w-none ">
 
-      <p class="mb-12 text-lg leading-8 prose sm:mb-16 sm:text-sm">A grid of albums currently in 'Heavy Rotation'—generated programatically from my Music account. *caveat: my kids use my account on the Sonos all the time—so the data is hopelessly skewed, though accurate.</p>
+      <p class="mb-12 text-lg leading-8 prose sm:mb-16 sm:text-sm">A grid of albums currently in 'Heavy Rotation'—generated programatically from my Music account. *caveat: the kids use my account on the Sonos all the time—so the data is hopelessly skewed, though still accurate. I'm probably listening to one of these albums right now.</p>
       <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
       { albums.map((album) =>(
         <li class="relative">
