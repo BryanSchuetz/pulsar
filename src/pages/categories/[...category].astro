@@ -2,6 +2,7 @@
 import { formatPosts } from "../../js/utils.js";
 import { getCollection } from 'astro:content';
 import {readableDate,relativeDate } from '../../js/utils.js'
+import {stripMarkdown} from '../../js/utils.js';
 import MainLayout from "../../layouts/MainLayout.astro";
 import type { CollectionEntry } from "astro:content";
 export async function getStaticPaths() {
@@ -40,20 +41,21 @@ import { marked } from 'marked';
   <div class="bg-white">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-4xl">
-        <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+        <div class="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {formattedPosts.map((post: CollectionEntry<"posts">) =>(
-          <article class="flex max-w-xl flex-col items-start justify-between p-4">
-            <div class="flex items-center gap-x-4 text-xs">
+          <article class="group flex flex-col items-start rounded-lg border border-gray-200 p-5 shadow-sm shadow-gray-100/50 transition-colors hover:border-gray-300">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-base sm:text-xs">
               <time datetime="2020-03-16" class="text-gray-500">{relativeDate(post.data.pubDate)}</time>
               <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 plain">{post.data.category}</a>
             </div>
             <div class="group relative">
-              <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+              <h3 class="mt-3 text-xl font-semibold leading-7 text-gray-900 group-hover:text-gray-600 sm:text-lg sm:leading-6">
                 <a href={`/${post.slug}`} class="plain">
                   <span class="absolute inset-0"></span>
                   {post.data.title}
                 </a>
               </h3>
+              <p class="mt-2 text-lg leading-8 text-gray-600 sm:text-sm sm:leading-6">{post.data.description && stripMarkdown(post.data.description).substring(0,100)}...</p>
             </div>
           </article>
           ))}
