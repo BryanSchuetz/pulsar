@@ -8,6 +8,9 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   output: 'static',
   site: 'https://distresssignal.org',
+  server: {
+    allowedHosts: true,
+  },
   integrations: [tailwind(), mdx()],
   markdown: {
     syntaxHighlight: {
