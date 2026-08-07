@@ -1,0 +1,26 @@
+---
+title: "Hosted Skills in Amp"
+tagline: It's Orbin' Time
+pubDate: 2026-08-07 00:00:00 Z
+tags:
+  - Tooling
+  - Agentic Coding
+category: tooling
+description: |
+  Amp now has 'Skill Repositories', making it easier than ever to have your skills where you want them. In an orb, locally, on a runner, use your skills anywhere you use Amp.
+---
+import { Image } from 'astro:assets'
+import HostedSkills from '/src/images/amp-hosted-skills.png'
+
+Like most everyone in my _timelines_, I've been building a ton of things with agents these days. I should really take a breath and capture some of my thoughts on the current state of AgENtiC CodING, etc.—but forgive me if I jump ahead here a bit. If like me, you're all-in on [Amp](https://ampcode.com/home), then you know the _joy_ of working with a "Frontier Company" that prides themselves on constantly adjusting the shape of their tools to meet the moment. They're for ever ripping out existing features and shipping new ones. It can be tough for me to keep up.
+
+<figure>
+  <Image src={HostedSkills} alt="Amp Personal Settings showing the Personal Skills list and a selected skill" />
+  <figcaption>Amp’s Personal Skills settings.</figcaption>
+</figure>
+
+Now, I'm not huge into skills or plugins, but I do have a few that I lean on and miss when they're not available. Partly because in Amp MCP servers are bundled within skills (which is super smart, but that's another post). As I've moved into cloud agents (orbs), I've been relying on an `.agents/setup` script in my projects that clones a private skills repo into the project so they're available when new orbs are floated. Kind of a pain.
+
+This morning I noticed a _third_ level of skill abstraction at `https://x-amp-user@ampcode.com/git/@user-name/-/skills` which was apparently added some point very recently. Near as I can tell, these hosted 'Skill Repositories' can totally replace the local, and project sets. They should be available in all orbs, all local threads, with Puck, on runners, 'everywhere you use Amp'. Nice. `amp clone user-skills` and `amp clone workspace-skills` will let you pull down your own skills and those managed in the workspace. There are also commands for `amp skill update` and `amp skill import`. But it's just an ordinary git repo, so you should be able to also manage it directly.
+
+Life (on the frontier) comes at you fast—as the kids say. I'm just happy to easily have my skills everywhere I want them now. It's orbin' time.
